@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. SEO Title -->
+    <title>About Vishwa Y Bhatt | Career & Community</title>
+    <meta name="description" content="Learn about Vishwa Y Bhatt, a Senior Finance Professional in the UK. View her career journey, qualifications, and community leadership experience.">
+
+    <!-- 2. We are loading Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 3. We are loading a professional font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 4. We are loading icons (for stats and links) -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    
+    <style>
+        /* ===== YOUR COLOR THEME ===== */
+        :root {
+            --color-primary-dark: #2F0909;  /* Your Dark Espresso/Maroon */
+            --color-primary-medium: #7a2828; /* A visible, professional red */
+            --color-primary-light-bg: #f9f6f6; /* A warm, very light off-white */
+            --color-primary-accent: #f0e9e9; /* A light highlight color */
+        }
+        
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary-light-bg);
+            color: #333;
+        }
+        
+        /* Custom classes */
+        .bg-primary-dark { background-color: var(--color-primary-dark); }
+        .text-primary-medium { color: var(--color-primary-medium); }
+        .text-primary-light { color: var(--color-primary-light-bg); }
+        .text-primary-dark { color: var(--color-primary-dark); }
+        .border-primary-accent { border-color: var(--color-primary-accent); }
+        .hover\:bg-primary-medium:hover { background-color: var(--color-primary-medium); }
+        .hover\:text-primary-medium:hover { color: var(--color-primary-medium); }
+        .hover\:border-primary-medium:hover { border-color: var(--color-primary-medium); }
+        .hero-gradient { background: linear-gradient(115deg, var(--color-primary-dark) 0%, #4a1e1e 100%); }
+        .card-gradient { background: linear-gradient(115deg, #ffffff 0%, #fefefe 100%); }
+
+        /* Fade-in animation */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <!-- Links back to homepage -->
+                <a href="index.html" class="text-2xl font-bold text-primary-dark">Vishwa Y Bhatt</a>
+            </div>
+            <!-- UPDATED: Links now point to new about.html page -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html#dashboard" class="text-gray-600 hover:text-primary-medium font-medium">Dashboard</a>
+                <a href="index.html#skills" class="text-gray-600 hover:text-primary-medium font-medium">Core Skills</a>
+                <a href="index.html#services" class="text-gray-600 hover:text-primary-medium font-medium">Services</a>
+                <!-- UPDATED: Link for Projects is now on this page -->
+                <a href="#projects" class="text-gray-600 hover:text-primary-medium font-medium">Projects</a>
+                <!-- UPDATED: Link for Career is now on homepage -->
+                <a href="index.html#career" class="text-gray-600 hover:text-primary-medium font-medium">Career Journey</a>
+                <a href="#about" class="text-gray-600 hover:text-primary-medium font-medium">About</a>
+                <a href="index.html#contact" class="bg-primary-dark hover:bg-primary-medium text-white px-4 py-2 rounded-full font-medium shadow-lg transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container mx-auto px-6 py-16 md:py-24">
+
+        <!-- ===== ABOUT ME SECTION (UPDATED) ===== -->
+        <section id="about" class="mt-8 bg-white p-8 md:p-12 rounded-2xl shadow-xl fade-in">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <!-- 
+                    ======================================================
+                    HOW TO ADD YOUR PICTURE: (FREE - GitHub Method)
+                    1. In your GitHub repo, click "Add file" -> "Upload files".
+                    2. Upload your photo (e.g., "my-photo.jpg").
+                    3. After it uploads, click on the file name ("my-photo.jpg").
+                    4. Click the "Download" button. RIGHT-CLICK the button and "Copy Link Address".
+                    5. Replace the "src" link below with your new link (it will be long).
+                    ======================================================
+                    -->
+                    <img src="https://placehold.co/400x400/2F0909/FFFFFF?text=Vishwa" alt="Vishwa Y Bhatt" class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover">
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-primary-dark mb-4">About Me</h2>
+                    <!-- UPDATED: New "About Me" text -->
+                    <p class="text-gray-700 text-lg mb-4">
+                        I turn complex financial data into actionable insight. With 7+ years in finance, analytics, and business process improvement—and a Master’s in FinTech—I specialise in helping organisations understand performance, forecast accurately, and grow profitably.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        My work blends traditional finance rigour with data analytics and automation, delivering faster closes, clearer dashboards, and smarter decisions.
+                    </p>
+                    
+                    <!-- NEW: Qualifications Section -->
+                    <h3 class="text-xl font-bold text-primary-dark mb-4">Qualifications</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <ion-icon name="school-outline" class="text-primary-medium text-2xl mr-3 mt-1"></ion-icon>
+                            <div>
+                                <span class="font-semibold">MSc Financial Technology</span><br>
+                                <span class="text-sm">Henley Business School, University of Reading (UK)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <ion-icon name="document-text-outline" class="text-primary-medium text-2xl mr-3 mt-1"></ion-icon>
+                            <div>
+                                <span class="font-semibold">ACCA (Association of Chartered Certified Accountants)</span><br>
+                                <span class="text-sm">Finalist (7 papers remaining)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MOVED: PROJECT CASE STUDIES (UPDATED) ===== -->
+        <section id="projects" class="mt-20 md:mt-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Project Case Studies</h2>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Dashboard Architecture -->
+                <div class="card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 transform hover:scale-105 transition duration-300 h-full">
+                    <h3 class="text-2xl font-bold text-primary-dark mb-4">Case Study: Reporting System Automation</h3>
+                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Challenge:</strong> Leadership lacked timely, high-quality data. The month-end reporting process was a 5-day, manual, and error-prone cycle in Excel.</p>
+                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Approach:</strong> I re-engineered the entire data pipeline. I architected a new data model, automated extraction with Python, and built a dynamic, self-service dashboard in Power BI.</p>
+                    <p class="text-gray-700"><strong class="text-primary-medium">Result:</strong> Cut reporting cycle by 60% (from 5 to 2 days) and eliminated 80+ hours of manual work per month, enabling faster, data-driven decision-making for the Board.</p>
+                </div>
+                
+                <!-- Project 2: Financial Modelling -->
+                <div class="card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 transform hover:scale-105 transition duration-300 h-full">
+                    <h3 class="text-2xl font-bold text-primary-dark mb-4">Case Study: Commercial Cost Optimisation</h3>
+                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Challenge:</strong> A £160M manufacturer faced margin erosion from volatile costs. The business lacked visibility into its true cost drivers.</p>
+                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Approach:</strong> I led a 12-month cross-functional analysis of procurement and logistics. I built new "what-if" models to simulate pricing scenarios and identify cost-saving opportunities.</p>
+                    <p class="text-gray-700"><strong class="text-primary-medium">Result:</strong> Presented findings of ~£1.4M in potential annual savings to leadership. My models were adopted to improve forecast accuracy by 18% and create more resilient pricing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEW: COMMUNITY & LEADERSHIP ===== -->
+        <section id="community" class="mt-24 md:mt-32">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Community & Leadership</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Volunteering 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
+                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Mentor & Community Volunteer</h3>
+                    <p class="font-medium text-primary-medium mb-4">Samvardhan Trust (2012 – Present)</p>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li>Organise and lead child education camps in rural villages.</li>
+                        <li>Run workshops for farmer families on financial literacy, money management, and micro-finance.</li>
+                        <li>Lead women's empowerment seminars to foster financial independence.</li>
+                    </ul>
+                </div>
+                <!-- Achievements -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
+                    <h3 class="text-2xl font-bold text-primary-dark mb-2">University Leadership & Awards</h3>
+                    <p class="font-medium text-primary-medium mb-4">University of Reading & Gujarat State University</p>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li>**Student Ambassador:** Acted as a key university representative and raised over £6,500 for the annual fund.</li>
+                        <li>**RED Award Recipient:** Recognised for outstanding leadership, multitasking, and community engagement.</li>
+                        <li>**Founder:** Established the Finance & Entrepreneurship Committees at Gujarat State University.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (UPDATED) ===== -->
+    <footer class="text-center py-8 mt-12">
+        <p class="text-gray-600">&copy; <span id="year"></span> Vishwa Y Bhatt</p>
+        <p class="text-gray-500 text-sm mt-1">Based in Crawley, West Sussex | Full UK Work Rights | Open to Contract & Permanent Roles</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT FOR FOOTER ===== -->
+    <script>
+        // Simple script to get the current year for the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
