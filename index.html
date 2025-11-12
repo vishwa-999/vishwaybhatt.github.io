@@ -51,11 +51,13 @@
         .hover\:border-primary-medium:hover { border-color: var(--color-primary-medium); }
         .hero-gradient { background: linear-gradient(115deg, var(--color-primary-dark) 0%, #4a1e1e 100%); }
         .card-gradient { background: linear-gradient(115deg, #ffffff 0%, #fefefe 100%); }
+        
+        /* FIX: Made all stat cards h-full to align them */
         .stat-card {
             display: flex; 
             flex-direction: column; 
             justify-content: space-between; 
-            height: 100%; /* FIX: This makes all cards the same height */
+            height: 100%; 
         }
         .stat-card:hover {
             transform: translateY(-5px);
@@ -89,11 +91,9 @@
                 <a href="#dashboard" class="text-gray-600 hover:text-primary-medium font-medium">Dashboard</a>
                 <a href="#skills" class="text-gray-600 hover:text-primary-medium font-medium">Core Skills</a>
                 <a href="#services" class="text-gray-600 hover:text-primary-medium font-medium">Services</a>
-                <!-- UPDATED: Link for Projects now points to about.html -->
                 <a href="about.html#projects" class="text-gray-600 hover:text-primary-medium font-medium">Projects</a>
                 <a href="#career" class="text-gray-600 hover:text-primary-medium font-medium">Career Journey</a>
                 <a href="#community" class="text-gray-600 hover:text-primary-medium font-medium">Community</a>
-                <!-- UPDATED: Link for About Me now points to about.html -->
                 <a href="about.html" class="text-gray-600 hover:text-primary-medium font-medium">About Me</a>
                 <a href="#contact" class="bg-primary-dark hover:bg-primary-medium text-white px-4 py-2 rounded-full font-medium shadow-lg transition duration-300">Contact</a>
             </div>
@@ -140,7 +140,7 @@
                     </div>
                 </div>
 
-                <!-- KPI 2: Cost Saving (UPDATED) -->
+                <!-- KPI 2: Cost Saving (COMPLETELY REBUILT) -->
                 <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.2s;">
                     <div>
                         <div class="flex items-center space-x-4">
@@ -153,15 +153,13 @@
                             </div>
                         </div>
                         <div class="mt-4">
-                            <p class="text-sm text-gray-500">Context: 12-Month Procurement Analysis</p>
+                            <p class="text-sm text-gray-500">Context: Utility (Fuel) Cost Optimisation & Procurement Analysis.</p>
+                            <p class="text-lg font-medium text-gray-700 mt-2">Impact: Drove boiler efficiency project & reduced key variable costs.</p>
                         </div>
-                    </div>
-                    <div class="mt-4">
-                        <div id="chart-savings"></div>
                     </div>
                 </div>
 
-                <!-- KPI 3: Efficiency (UPDATED) -->
+                <!-- KPI 3: Efficiency (COMPLETELY REBUILT) -->
                 <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.3s;">
                     <div>
                         <div class="flex items-center space-x-4">
@@ -173,14 +171,14 @@
                                 <p class="text-2xl font-bold text-primary-dark">60% Time Saved</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-4">
-                        <p class="text-sm text-gray-500">Impact</p>
-                        <p class="text-lg font-medium text-gray-700">Reporting Cycle Cut: 5 days to 2</p>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">Context: End-to-end automation (data collection to delivery).</p>
+                            <p class="text-lg font-medium text-gray-700 mt-2">Impact: Cut reporting from 5 to 2 days; improved accuracy & reduced human error.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- KPI 4: Stakeholders (COMPLETELY REBUILT) -->
+                <!-- KPI 4: Stakeholders (KEPT AS-IS, NOW ALIGNED) -->
                 <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.4s;">
                     <div>
                         <div class="flex items-center gap-3 mb-3">
@@ -191,8 +189,8 @@
                                 C-Suite & Board Advisory
                             </h3>
                         </div>
-                        <p class="text-gray-700 text-sm">
-                            Partnered with CFO and Exec teams to build financial dashboards, deliver board packs, and support £1.4M cost-saving decisions through data-driven insights.
+                        <p class="text-gray-700 text-sm mt-4">
+                            Partnered with CFO & Execs to build dashboards, deliver board packs, and support cost-saving decisions.
                         </p>
                     </div>
                     <p class="text-gray-500 text-xs mt-3">Board Reports Delivered: 30+ | Stakeholders: CFO, CEO, HODs</p>
@@ -200,7 +198,7 @@
             </div>
         </section>
 
-        <!-- ===== UPDATED: CORE TECHNOLOGIES BAR ===== -->
+        <!-- ===== CORE TECHNOLOGIES BAR ===== -->
         <section id="trust" class="mt-20 md:mt-24">
             <h2 class="text-sm font-semibold text-center text-gray-500 uppercase tracking-wider mb-6">
                 Core Technologies & Skills
@@ -217,7 +215,7 @@
             </div>
         </section>
 
-        <!-- ===== CORE SKILLS SECTION (UPDATED) ===== -->
+        <!-- ===== CORE SKILLS SECTION ===== -->
         <section id="skills" class="mt-20 md:mt-24">
             <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Core Skills</h2>
             <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
@@ -226,7 +224,6 @@
                     <div>
                         <h3 class="text-xl font-bold text-primary-dark mb-4">Core Finance</h3>
                         <ul class="space-y-2 text-gray-700">
-                            <!-- UPDATED: Icon color changed to text-primary-medium -->
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>FP&A</li>
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>P&L Management</li>
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Budgeting & Forecasting</li>
@@ -260,7 +257,7 @@
             </div>
         </section>
 
-        <!-- ===== NEW: CONSULTING & PROJECT SERVICES ===== -->
+        <!-- ===== CONSULTING & PROJECT SERVICES ===== -->
         <section id="services" class="mt-20 md:mt-24">
             <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Consulting & Project Services</h2>
             <p class="text-lg text-gray-700 max-w-3xl mb-8">Available for contract, freelance, or project-based work. I provide rapid, expert solutions to accelerate your finance and data functions.</p>
@@ -293,7 +290,7 @@
             </div>
         </section>
 
-        <!-- ===== MOVED: CAREER JOURNEY (Vertical Timeline) ===== -->
+        <!-- ===== CAREER JOURNEY (Vertical Timeline) ===== -->
         <section id="career" class="mt-24 md:mt-32">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-dark mb-16">Career Journey</h2>
             
@@ -334,7 +331,6 @@
                         <ion-icon name="bar-chart-outline" class="mx-auto text-white text-xl"></ion-icon>
                     </div>
                     <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
-                        <!-- UPDATED DATES -->
                         <p class="text-sm font-medium text-primary-medium">June 2022 – Dec 2023</p>
                         <h3 class="font-bold text-gray-900 text-lg">Finance & Business Analyst</h3>
                         <p class="text-sm text-gray-600">Urban Science (UK)</p>
@@ -347,18 +343,7 @@
                     <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
                         <ion-icon name="podium-outline" class="mx-auto text-white text-xl"></ion-icon>
                     </div>
-                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
-                        <!-- UPDATED DATES -->
-                        <p class="text-sm font-medium text-primary-medium">March 2014 – Sep 2021</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Senior Finance Manager</h3>
-                        <p class="text-sm text-gray-600">Shanro Key Chem</p>
-                    </div>
-                </div>
-
-                <!-- Item 5: Education -->
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
+                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/1color-primary-dark shadow-xl w-10 h-10 rounded-full">
                         <ion-icon name="school-outline" class="mx-auto text-white text-xl"></ion-icon>
                     </div>
                     <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
@@ -366,6 +351,33 @@
                         <h3 class="font-bold text-gray-900 text-lg">MSc Financial Technology</h3>
                         <p class="text-sm text-gray-600">Henley Business School (UK)</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEW: ABOUT ME SECTION (MOVED TO HOME) ===== -->
+        <section id="about-home" class="mt-20 md:mt-24 bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1">
+                    <!-- 
+                    ======================================================
+                    (1) YOUR PICTURE LINK:
+                    I have linked your 'PHOTO-2025-03-04-20-18-29.jpg' file.
+                    ======================================================
+                    -->
+                    <img src="PHOTO-2025-03-04-20-18-29.jpg" alt="Vishwa Y Bhatt" class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white">
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-primary-dark mb-4">About Me</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        I turn complex financial data into actionable insight. With 7+ years in finance, analytics, and business process improvement—and a Master’s in FinTech—I specialise in helping organisations understand performance, forecast accurately, and grow profitably.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        My work blends traditional finance rigour with data analytics and automation, delivering faster closes, clearer dashboards, and smarter decisions.
+                    </p>
+                    <a href="about.html" class="font-bold text-primary-medium hover:text-primary-dark transition duration-300">
+                        Learn More About My Journey & Projects &rarr;
+                    </a>
                 </div>
             </div>
         </section>
@@ -515,12 +527,27 @@
                 I am currently open to new opportunities for contract or permanent roles. Let's talk.
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                <!-- UPDATED: CV Link Fixed -->
+                <!-- 
+                ======================================================
+                (1) CV LINK FIX: 
+                This MUST match the *exact* name of the PDF you uploaded to GitHub.
+                I have set it to "VISHWA Y BHATT_CV_.pdf" based on your file.
+                ======================================================
+                -->
                 <a href="VISHWA Y BHATT_CV_.pdf" target="_blank" 
                    class="bg-white text-primary-dark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
                     Download CV (PDF)
                 </a>
-                <a href="mailto:vishwaybhatt@gmail.com" 
+                <!-- 
+                ======================================================
+                (2) CALENDLY LINK FIX:
+                1. Go to https://calendly.com/ and sign up for a FREE account.
+                2. Create a "15 Minute Meeting" event.
+                3. Copy your personal link (e.g., https://calendly.com/vishwabh/15min)
+                4. Paste your link below, replacing my placeholder.
+                ======================================================
+                -->
+                <a href="https://calendly.com/YOUR-LINK-HERE" target="_blank"
                    class="border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
                     Schedule a 15-Min Call
                 </a>
