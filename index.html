@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 1. SEO Title -->
-    <title>Vishwa Y Bhatt | Senior Finance Professional (FP&A, Data) | UK</title>
+    
+    <!-- 1. SEO Polish -->
+    <title>Vishwa Y Bhatt | Finance & Data Analytics (UK) – FP&A, Reporting, Power BI</title>
+    <meta name="description" content="Senior Finance Manager / Analyst in the UK (Crawley, West Sussex). Part-qualified ACCA with expertise in FP&A, Power BI, Python, and data-driven transformation.">
 
     <!-- 2. We are loading Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <!-- 4. We are loading icons (for stats and links) -->
-    <script type_module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- 5. We are loading ApexCharts for the KPI dashboard visuals -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -48,13 +50,21 @@
         .hero-gradient { background: linear-gradient(115deg, var(--color-primary-dark) 0%, #4a1e1e 100%); }
         .card-gradient { background: linear-gradient(115deg, #ffffff 0%, #fefefe 100%); }
         .stat-card {
-            display: flex; /* Use flexbox... */
-            flex-direction: column; /* ...to stack content vertically... */
-            justify-content: space-between; /* ...and space it out evenly */
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
         }
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+        /* Fade-in animation */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -64,18 +74,18 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <a href="#" class="text-2xl font-bold text-primary-dark">Vishwa Y Bhatt</a>
+                <a href="index.html" class="text-2xl font-bold text-primary-dark">Vishwa Y Bhatt</a>
             </div>
-            <!-- UPDATED: New links for Services & Testimonials -->
+            <!-- UPDATED: Links now point to new about.html page -->
             <div class="hidden md:flex space-x-6">
                 <a href="#dashboard" class="text-gray-600 hover:text-primary-medium font-medium">Dashboard</a>
                 <a href="#skills" class="text-gray-600 hover:text-primary-medium font-medium">Core Skills</a>
                 <a href="#services" class="text-gray-600 hover:text-primary-medium font-medium">Services</a>
-                <a href="#projects" class="text-gray-600 hover:text-primary-medium font-medium">Projects</a>
+                <!-- UPDATED: Link for Projects now points to about.html -->
+                <a href="about.html#projects" class="text-gray-600 hover:text-primary-medium font-medium">Projects</a>
+                <!-- UPDATED: Link for Career is now on this page -->
                 <a href="#career" class="text-gray-600 hover:text-primary-medium font-medium">Career Journey</a>
-                <a href="#community" class="text-gray-600 hover:text-primary-medium font-medium">Community</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-primary-medium font-medium">Testimonials</a>
-                <a href="#about" class="text-gray-600 hover:text-primary-medium font-medium">About</a>
+                <a href="about.html" class="text-gray-600 hover:text-primary-medium font-medium">About</a>
                 <a href="#contact" class="bg-primary-dark hover:bg-primary-medium text-white px-4 py-2 rounded-full font-medium shadow-lg transition duration-300">Contact</a>
             </div>
         </nav>
@@ -86,22 +96,22 @@
 
         <!-- ===== HERO SECTION (UPDATED) ===== -->
         <section id="hero" class="text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-primary-dark leading-tight">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-primary-dark leading-tight fade-in">
                 Senior Finance Professional
             </h1>
-            <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
                 I turn complex financial data into actionable insight.
             </p>
         </section>
 
         <!-- ===== KPI DASHBOARD (UPDATED) ===== -->
         <section id="dashboard" class="mt-20">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Professional Dashboard</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8 fade-in">Professional Dashboard</h2>
             <!-- UPDATED: Added h-full to cards for alignment -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- KPI 1: Portfolio (UPDATED) -->
-                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full">
+                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.1s;">
                     <div>
                         <div class="flex items-center space-x-4">
                             <div class="bg-primary-dark text-white w-12 h-12 rounded-full flex items-center justify-center">
@@ -123,7 +133,7 @@
                 </div>
 
                 <!-- KPI 2: Cost Saving (UPDATED) -->
-                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full">
+                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.2s;">
                     <div>
                         <div class="flex items-center space-x-4">
                             <div class="bg-primary-dark text-white w-12 h-12 rounded-full flex items-center justify-center">
@@ -144,7 +154,7 @@
                 </div>
 
                 <!-- KPI 3: Efficiency (UPDATED) -->
-                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full">
+                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.3s;">
                     <div>
                         <div class="flex items-center space-x-4">
                             <div class="bg-primary-dark text-white w-12 h-12 rounded-full flex items-center justify-center">
@@ -163,7 +173,7 @@
                 </div>
 
                 <!-- KPI 4: Stakeholders (UPDATED) -->
-                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full">
+                <div class="stat-card card-gradient p-6 rounded-2xl shadow-lg border border-gray-200 transition-all duration-300 h-full fade-in" style="animation-delay: 0.4s;">
                     <div>
                         <div class="flex items-center space-x-4">
                             <div class="bg-primary-dark text-white w-12 h-12 rounded-full flex items-center justify-center">
@@ -183,7 +193,24 @@
             </div>
         </section>
 
-        <!-- ===== CORE SKILLS SECTION ===== -->
+        <!-- ===== NEW: TECHNOLOGY & TRUST LOGO BAR ===== -->
+        <section id="trust" class="mt-20 md:mt-24">
+            <h2 class="text-sm font-semibold text-center text-gray-500 uppercase tracking-wider mb-6">
+                Core Technologies & Qualifications
+            </h2>
+            <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+                <div class="flex flex-wrap justify-around items-center gap-8 opacity-70 grayscale">
+                    <!-- This uses text as a simple, effective fallback -->
+                    <span class="text-2xl font-bold text-gray-500">Power BI</span>
+                    <span class="text-2xl font-bold text-gray-500">Python</span>
+                    <span class="text-2xl font-bold text-gray-500">SAP</span>
+                    <span class="text-2xl font-bold text-gray-500">ACCA</span>
+                    <span class="text-2xl font-bold text-gray-500">Henley Business School</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CORE SKILLS SECTION (UPDATED) ===== -->
         <section id="skills" class="mt-20 md:mt-24">
             <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Core Skills</h2>
             <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
@@ -192,33 +219,34 @@
                     <div>
                         <h3 class="text-xl font-bold text-primary-dark mb-4">Core Finance</h3>
                         <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>FP&A</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>P&L Management</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Budgeting & Forecasting</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Cost Optimisation</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Due Diligence</li>
+                            <!-- UPDATED: Icon color changed to text-primary-medium -->
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>FP&A</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>P&L Management</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Budgeting & Forecasting</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Cost Optimisation</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Due Diligence</li>
                         </ul>
                     </div>
                     <!-- Column 2: Data & Tech -->
                     <div>
                         <h3 class="text-xl font-bold text-primary-dark mb-4">Data & Tech Stack</h3>
                         <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Power BI Architecture</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Python (Pandas, NumPy)</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Advanced Excel & VBA</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>SQL & ERP Systems</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Financial Modelling</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Power BI Architecture</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Python (Pandas, NumPy)</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Advanced Excel & VBA</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>SQL & ERP Systems</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Financial Modelling</li>
                         </ul>
                     </div>
                     <!-- Column 3: Strategy & Leadership -->
                     <div>
                         <h3 class="text-xl font-bold text-primary-dark mb-4">Strategy & Leadership</h3>
                         <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Business Transformation</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Stakeholder Management</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Process Re-Engineering</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>Executive Reporting</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-green-600 mr-2"></ion-ic>High-Integrity Leadership</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Business Transformation</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Stakeholder Management</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Process Re-Engineering</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Executive Reporting</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>High-Integrity Leadership</li>
                         </ul>
                     </div>
                 </div>
@@ -258,64 +286,81 @@
             </div>
         </section>
 
-        <!-- ===== PROJECT CASE STUDIES (UPDATED) ===== -->
-        <section id="projects" class="mt-20 md:mt-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Project Case Studies</h2>
-            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Project 1: Dashboard Architecture -->
-                <div class="card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 transform hover:scale-105 transition duration-300 h-full">
-                    <h3 class="text-2xl font-bold text-primary-dark mb-4">Case Study: Reporting System Automation</h3>
-                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Challenge:</strong> Leadership lacked timely, high-quality data. The month-end reporting process was a 5-day, manual, and error-prone cycle in Excel.</p>
-                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Approach:</strong> I re-engineered the entire data pipeline. I architected a new data model, automated extraction with Python, and built a dynamic, self-service dashboard in Power BI.</p>
-                    <p class="text-gray-700"><strong class="text-primary-medium">Result:</strong> Cut reporting cycle by 60% (from 5 to 2 days) and eliminated 80+ hours of manual work per month, enabling faster, data-driven decision-making for the Board.</p>
-                </div>
-                
-                <!-- Project 2: Financial Modelling -->
-                <div class="card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 transform hover:scale-105 transition duration-300 h-full">
-                    <h3 class="text-2xl font-bold text-primary-dark mb-4">Case Study: Commercial Cost Optimisation</h3>
-                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Challenge:</strong> A £160M manufacturer faced margin erosion from volatile costs. The business lacked visibility into its true cost drivers.</p>
-                    <p class="text-gray-700 mb-2"><strong class="text-primary-medium">Approach:</strong> I led a 12-month cross-functional analysis of procurement and logistics. I built new "what-if" models to simulate pricing scenarios and identify cost-saving opportunities.</p>
-                    <p class="text-gray-700"><strong class="text-primary-medium">Result:</strong> Presented findings of ~£1.4M in potential annual savings to leadership. My models were adopted to improve forecast accuracy by 18% and create more resilient pricing.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== NEW: CAREER JOURNEY CHART ===== -->
+        <!-- ===== MOVED: CAREER JOURNEY (Vertical Timeline) ===== -->
         <section id="career" class="mt-24 md:mt-32">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-dark mb-16">Career Journey</h2>
-            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
-                <!-- This div will be populated by the ApexCharts script -->
-                <div id="chart-career-journey"></div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <!-- Vertical line -->
+                <div class="absolute left-1/2 w-1.5 bg-primary-medium h-full -ml-1 rounded-full opacity-30"></div>
+
+                <!-- Item 1: Asst. Manager (Current) -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
+                        <ion-icon name="rocket-outline" class="mx-auto text-white text-xl"></ion-icon>
+                    </div>
+                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
+                        <p class="text-sm font-medium text-primary-medium">Aug 2024 – Present</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Asst. Manager, Finance & Data</h3>
+                        <p class="text-sm text-gray-600">Agrocel Industries</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: NEW - Senior Executive (Promotion) -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
+                        <ion-icon name="briefcase-outline" class="mx-auto text-white text-xl"></ion-icon>
+                    </div>
+                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
+                        <p class="text-sm font-medium text-primary-medium">Feb 2024 – Aug 2024</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Senior Executive, Finance & Data</h3>
+                        <p class="text-sm text-gray-600">Agrocel Industries</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Urban Science -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
+                        <ion-icon name="bar-chart-outline" class="mx-auto text-white text-xl"></ion-icon>
+                    </div>
+                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
+                        <p class="text-sm font-medium text-primary-medium">2022 – 2023</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Finance & Business Analyst</h3>
+                        <p class="text-sm text-gray-600">Urban Science (UK)</p>
+                    </div>
+                </div>
+                
+                <!-- Item 4: Shanro -->
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
+                        <ion-icon name="podium-outline" class="mx-auto text-white text-xl"></ion-icon>
+                    </div>
+                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
+                        <p class="text-sm font-medium text-primary-medium">2015 – 2021</p>
+                        <h3 class="font-bold text-gray-900 text-lg">Senior Finance Manager</h3>
+                        <p class="text-sm text-gray-600">Shanro Key Chem</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Education -->
+                <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
+                        <ion-icon name="school-outline" class="mx-auto text-white text-xl"></ion-icon>
+                    </div>
+                    <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
+                        <p class="text-sm font-medium text-primary-medium">2021 – 2022</p>
+                        <h3 class="font-bold text-gray-900 text-lg">MSc Financial Technology</h3>
+                        <p class="text-sm text-gray-600">Henley Business School (UK)</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- ===== NEW: COMMUNITY & LEADERSHIP ===== -->
-        <section id="community" class="mt-24 md:mt-32">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Community & Leadership</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Volunteering 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Volunteer & Mentor</h3>
-                    <p class="font-medium text-primary-medium mb-4">Samvardhan Trust (2012 – Present)</p>
-                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                        <li>Organise and lead child education camps in rural villages.</li>
-                        <li>Run workshops for farmer families on financial literacy, money management, and micro-finance.</li>
-                        <li>Lead women's empowerment seminars and events to foster financial independence.</li>
-                    </ul>
-                </div>
-                <!-- Achievements -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Achievements & University Leadership</h3>
-                    <p class="font-medium text-primary-medium mb-4">University of Reading & Gujarat State University</p>
-                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                        <li>**Student Ambassador:** Acted as a key university representative and raised over £6,500 for the annual fund.</li>
-                        <li>**RED Award Recipient:** Recognised for outstanding leadership, multitasking, and community engagement.</li>
-                        <li>**Founder:** Established the Finance & Entrepreneurship Committees at Gujarat State University.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
         <!-- ===== TESTIMONIALS (UPDATED) ===== -->
         <section id="testimonials" class="mt-20 md:mt-24">
@@ -342,92 +387,21 @@
             </div>
         </section>
 
-        <!-- ===== ABOUT ME SECTION (UPDATED) ===== -->
-        <section id="about" class="mt-20 md:mt-24 bg-white p-8 md:p-12 rounded-2xl shadow-xl">
-            <div class="grid md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-1">
-                    <!-- 
-                    ======================================================
-                    HOW TO ADD YOUR PICTURE: (FREE - GitHub Method)
-                    1. In your GitHub repo, click "Add file" -> "Upload files".
-                    2. Upload your photo (e.g., "my-photo.jpg").
-                    3. After it uploads, click on the file name ("my-photo.jpg").
-                    4. Click the "Download" button. RIGHT-CLICK the button and "Copy Link Address".
-                    5. Replace the "src" link below with your new link (it will be long).
-                    ======================================================
-                    -->
-                    <img
-  src="https://raw.githubusercontent.com/vishwa-999/vishwaybhatt.github.io/main/IMG_1351.JPG"
-  alt="Vishwa Y Bhatt"
-  loading="lazy"
-  width="256"
-  height="256"
-  class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover ring-4 ring-[#2F0909]/10"
-/>
-<img src="https://github.com/vishwa-999/vishwaybhatt.github.io/blob/main/PHOTO-2025-03-04-20-18-29.jpg" class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover">
-                </div> 
-                <div class="md:col-span-2">
-                    <h2 class="text-3xl font-bold text-primary-dark mb-4">About Me</h2>
-                    <!-- UPDATED: New "About Me" text -->
-                    <p class="text-gray-700 text-lg mb-4">
-                        I turn complex financial data into actionable insight. With 7+ years in finance, analytics, and business process improvement—and a Master’s in FinTech—I specialise in helping organisations understand performance, forecast accurately, and grow profitably.
-                    </p>
-                    <p class="text-gray-700 text-lg mb-6">
-                        My work blends traditional finance rigour with data analytics and automation, delivering faster closes, clearer dashboards, and smarter decisions.
-                    </p>
-                    
-                    <!-- NEW: Qualifications Section -->
-                    <h3 class="text-xl font-bold text-primary-dark mb-4">Qualifications</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <ion-icon name="school-outline" class="text-primary-medium text-2xl mr-3 mt-1"></ion-icon>
-                            <div>
-                                <span class="font-semibold">MSc Financial Technology</span><br>
-                                <span class="text-sm">Henley Business School, University of Reading (UK)</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <ion-icon name="document-text-outline" class="text-primary-medium text-2xl mr-3 mt-1"></ion-icon>
-                            <div>
-                                <span class="font-semibold">ACCA (Association of Chartered Certified Accountants)</span><br>
-                                <span class="text-sm">Finalist (7 papers remaining)</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
         <!-- ===== CONTACT SECTION (UPDATED) ===== -->
         <section id="contact" class="mt-20 md:mt-24 hero-gradient rounded-2xl shadow-2xl p-8 md:p-16 text-center text-white">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to transform your finance function?</h2>
             <p class="text-lg md:text-xl text-primary-accent max-w-2xl mx-auto mb-10">
-                <!-- UPDATED: Removed "Immediately Available" -->
                 I am currently open to new opportunities for contract or permanent roles. Let's talk.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 
-                <!-- 
-                ======================================================
-                (1) HOW TO ADD YOUR CV:
-                1. Save your CV as `cv.pdf` (all lowercase).
-                2. Upload `cv.pdf` to your GitHub repository, just like you did with `index.html`.
-                3. This link will then work automatically.
-                ======================================================
-                -->
+                <!-- (1) HOW TO ADD YOUR CV: -->
                 <a href="cv.pdf" target="_blank" 
                    class="bg-white text-primary-dark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
                    Download CV (PDF)
                 </a>
                 
-                <!-- 
-                ======================================================
-                (2) HOW TO ADD A CALENDAR LINK:
-                1. Sign up for a free service like https://calendly.com/
-                2. Get your personal link.
-                3. Replace the "#" below with your Calendly link.
-                ======================================================
-                -->
+                <!-- (2) HOW TO ADD A CALENDAR LINK: -->
                 <a href="#" target="_blank" 
                    class="bg-primary-medium text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
                    Schedule a 15-Min Call
@@ -451,7 +425,6 @@
     <!-- ===== FOOTER (UPDATED) ===== -->
     <footer class="text-center py-8 mt-12">
         <p class="text-gray-600">&copy; <span id="year"></span> Vishwa Y Bhatt</p>
-        <!-- UPDATED: Removed "Immediately Available" -->
         <p class="text-gray-500 text-sm mt-1">Based in Crawley, West Sussex | Full UK Work Rights | Open to Contract & Permanent Roles</p>
     </footer>
 
@@ -492,89 +465,6 @@
         var chartSavings = new ApexCharts(document.querySelector("#chart-savings"), optionsSavings);
         chartSavings.render();
         
-        // --- NEW: Chart 4: Career Journey (Gantt-style) ---
-        var optionsCareer = {
-          series: [
-            {
-              name: 'Career',
-              data: [
-                {
-                  x: 'Senior Finance Manager',
-                  y: [
-                    new Date('2015-03-01').getTime(),
-                    new Date('2021-09-30').getTime()
-                  ],
-                  fillColor: '#7a2828' // Primary Medium
-                },
-                {
-                  x: 'Finance & Biz Analyst (UK)',
-                  y: [
-                    new Date('2022-07-01').getTime(),
-                    new Date('2023-12-31').getTime()
-                  ],
-                  fillColor: '#7a2828'
-                },
-                {
-                  x: 'Senior Executive (Data)',
-                  y: [
-                    new Date('2024-02-01').getTime(),
-                    new Date('2024-08-31').getTime()
-                  ],
-                  fillColor: '#7a2828'
-                },
-                {
-                  x: 'Asst. Manager (Data)',
-                  y: [
-                    new Date('2024-08-01').getTime(),
-                    new Date().getTime() // Stretches to today
-                  ],
-                  fillColor: '#2F0909' // Primary Dark (current role)
-                }
-              ]
-            }
-          ],
-          chart: {
-            height: 250,
-            type: 'rangeBar',
-            toolbar: { show: false }
-          },
-          plotOptions: {
-            bar: {
-              horizontal: true,
-              barHeight: '50%',
-              rangeBarGroupRows: true
-            }
-          },
-          colors: ['#7a2828'],
-          xaxis: {
-            type: 'datetime',
-            labels: {
-              style: {
-                colors: '#333'
-              }
-            }
-          },
-          yaxis: {
-            labels: {
-              style: {
-                colors: '#333',
-                fontSize: '14px',
-                fontWeight: 600
-              }
-            }
-          },
-          tooltip: {
-            x: {
-              format: 'MMM yyyy'
-            }
-          },
-          grid: {
-            borderColor: '#f0e9e9' // Primary Accent
-          }
-        };
-
-        var chartCareer = new ApexCharts(document.querySelector("#chart-career-journey"), optionsCareer);
-        chartCareer.render();
     </script>
 </body>
 </html>
