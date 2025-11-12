@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <!-- 4. We are loading icons (for stats and links) -->
-    <!-- FIXED: Corrected 'type.module"' to 'type="module"' -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- 5. We are loading ApexCharts for the KPI dashboard visuals -->
@@ -56,6 +55,7 @@
             display: flex; 
             flex-direction: column; 
             justify-content: space-between; 
+            height: 100%; /* FIX: This makes all cards the same height */
         }
         .stat-card:hover {
             transform: translateY(-5px);
@@ -89,9 +89,11 @@
                 <a href="#dashboard" class="text-gray-600 hover:text-primary-medium font-medium">Dashboard</a>
                 <a href="#skills" class="text-gray-600 hover:text-primary-medium font-medium">Core Skills</a>
                 <a href="#services" class="text-gray-600 hover:text-primary-medium font-medium">Services</a>
+                <!-- UPDATED: Link for Projects now points to about.html -->
                 <a href="about.html#projects" class="text-gray-600 hover:text-primary-medium font-medium">Projects</a>
                 <a href="#career" class="text-gray-600 hover:text-primary-medium font-medium">Career Journey</a>
                 <a href="#community" class="text-gray-600 hover:text-primary-medium font-medium">Community</a>
+                <!-- UPDATED: Link for About Me now points to about.html -->
                 <a href="about.html" class="text-gray-600 hover:text-primary-medium font-medium">About Me</a>
                 <a href="#contact" class="bg-primary-dark hover:bg-primary-medium text-white px-4 py-2 rounded-full font-medium shadow-lg transition duration-300">Contact</a>
             </div>
@@ -258,10 +260,10 @@
             </div>
         </section>
 
-        <!-- ===== CONSULTING & PROJECT SERVICES ===== -->
+        <!-- ===== NEW: CONSULTING & PROJECT SERVICES ===== -->
         <section id="services" class="mt-20 md:mt-24">
             <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Consulting & Project Services</h2>
-            <p class="text-lg text-gray-700 max-w-3xl mb-8">Available for short-term, high-impact projects. I provide rapid, expert solutions to accelerate your finance and data functions.</p>
+            <p class="text-lg text-gray-700 max-w-3xl mb-8">Available for contract, freelance, or project-based work. I provide rapid, expert solutions to accelerate your finance and data functions.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service 1 -->
@@ -457,12 +459,12 @@
                     </div>
      
                     <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
-                        <div class="p-3 rounded-xl bg-primary-accent/50">
-                            <p class="text-xs text-gray-500">Initiatives Launched</p>
+                        <div class="p-3 rounded-xl bg-primary-accent">
+                            <p class="text-xs text-primary-dark">Initiatives Launched</p>
                             <p class="font-semibold text-primary-dark">Student Clinics, Guest Talks</p>
                         </div>
-                        <div class="p-3 rounded-xl bg-primary-accent/50">
-                            <p class="text-xs text-gray-500">Focus</p>
+                        <div class="p-3 rounded-xl bg-primary-accent">
+                            <p class="text-xs text-primary-dark">Focus</p>
                             <p class="font-semibold text-primary-dark">Financial Literacy & Startups</p>
                         </div>
                     </div>
@@ -476,28 +478,31 @@
             </div>
         </section>
 
-
         <!-- ===== TESTIMONIALS (UPDATED) ===== -->
         <section id="testimonials" class="mt-20 md:mt-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark text-center mb-12">Testimonials & Goodwill</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                    <p class="text-lg text-gray-700 italic mb-4">
-                        "Vishwa's ability to dive deep into our operations and present clear, actionable insights was invaluable. A true professional with high integrity."
-                    </p>
-                    <!-- UPDATED: Added LinkedIn URL -->
-                    <a href="https://www.linkedin.com/in/bvmehta/" target="_blank" class="font-bold text-primary-dark hover:text-primary-medium">CA Bimal Mehta</a>
-                    <p class="text-sm text-gray-600">Managing Director, Transpek Industries Ltd</p>
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+                    <p class="text-gray-700 text-lg italic mb-6">"Vishwa is a highly analytical and driven professional. Her ability to break down complex problems and present clear, data-driven solutions was invaluable to our strategic planning and finance functions."</p>
+                    <div class="flex items-center">
+                        <div class="ml-4">
+                            <!-- UPDATED: Name is now a link -->
+                            <a href="https://www.linkedin.com/in/bvmehta/" target="_blank" class="font-bold text-primary-dark hover:text-primary-medium">Bimal Mehta</a>
+                            <p class="text-sm text-gray-500">Managing Director, Transpek Industries Ltd</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                    <p class="text-lg text-gray-700 italic mb-4">
-                        "A brilliant mind for FinTech. Vishwa's approach to financial modelling and data analysis is both strategic and technically advanced. An exceptional analyst."
-                    </p>
-                    <!-- UPDATED: Added LinkedIn URL -->
-                    <a href="https://www.linkedin.com/in/simone-varotto-073731198/" target="_blank" class="font-bold text-primary-dark hover:text-primary-medium">Prof. Simone Verotto</a>
-                    <p class="text-sm text-gray-600">Henley Business School, University of Reading</p>
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+                    <p class="text-gray-700 text-lg italic mb-6">"I taught Vishwa during her MSc in Financial Technology. She consistently demonstrated a sharp intellect, a strong grasp of data analysis, and a professional, proactive approach to her work."</D>
+                    <div class="flex items-center">
+                        <div class="ml-4">
+                            <!-- UPDATED: Name is now a link -->
+                            <a href="https://www.linkedin.com/in/simone-varotto-073731198/" target="_blank" class="font-bold text-primary-dark hover:text-primary-medium">Prof. Simone Varotto</a>
+                            <p class="text-sm text-gray-500">Henley Business School, University of Reading</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -505,24 +510,23 @@
         <!-- ===== CONTACT SECTION (UPDATED) ===== -->
         <section id="contact" class="mt-20 md:mt-24 hero-gradient rounded-2xl shadow-2xl p-8 md:p-16 text-center text-white">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready to transform your finance function?</h2>
+            <!-- UPDATED: Text is no longer "immediately" -->
             <p class="text-lg md:text-xl text-primary-accent max-w-2xl mx-auto mb-10">
                 I am currently open to new opportunities for contract or permanent roles. Let's talk.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                
-                <!-- (1) HOW TO ADD YOUR CV: -->
-                <a href="VISHWA Y BHATT_CV_" target="_blank" 
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <!-- UPDATED: CV Link Fixed -->
+                <a href="VISHWA Y BHATT_CV_.pdf" target="_blank" 
                    class="bg-white text-primary-dark font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
-                   Download CV (PDF)
+                    Download CV (PDF)
                 </a>
-                
-                <!-- (2) HOW TO ADD A CALENDAR LINK: -->
-                <a href="#" target="_blank" 
-                   class="bg-primary-medium text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
-                   Schedule a 15-Min Call
+                <a href="mailto:vishwaybhatt@gmail.com" 
+                   class="border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                    Schedule a 15-Min Call
                 </a>
             </div>
             
+            <!-- Social Links -->
             <div class="flex justify-center space-x-8 mt-12">
                 <a href="https://www.linkedin.com/in/vishwabhatt" target="_blank" class="text-white hover:text-gray-300 transition duration-300">
                     <ion-icon name="logo-linkedin" class="text-5xl"></ion-icon>
@@ -537,9 +541,9 @@
 
     </main>
 
-    <!-- ===== FOOTER (UPDATED) ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="text-center py-8 mt-12">
-        <p class="text-gray-600">&copy; <span id="year"></span> Vishwa Y Bhatt</p>
+        <p class="text-gray-600">&copy; <span id="year"></span> Vishwa Y Bhatt. All rights reserved.</p>
         <p class="text-gray-500 text-sm mt-1">Based in Crawley, West Sussex | Full UK Work Rights | Open to Contract & Permanent Roles</p>
     </footer>
 
@@ -548,38 +552,36 @@
         // Simple script to get the current year for the footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // ===== APEXCHARTS SCRIPT FOR KPI DASHBOARD =====
-
-        // --- Chart 1: Portfolio Growth ---
+        // Chart 1: Portfolio (Sparkline)
         var optionsPortfolio = {
-          series: [{ data: [5, 12, 10, 15, 14, 18] }],
-          chart: { type: 'line', height: 60, sparkline: { enabled: true } },
-          tooltip: {
-            x: { show: false },
-            y: { title: { formatter: () => 'Return' }, formatter: (val) => `${val}%` },
-            marker: { show: false }
-          },
-          colors: ['#22c55e'], // green-600
-          stroke: { width: 3, curve: 'smooth' },
+            series: [{ data: [10, 41, 35, 51, 49, 62, 69, 91, 148] }],
+            chart: { type: 'line', height: 100, sparkline: { enabled: true } },
+            stroke: { curve: 'smooth', width: 3, colors: ['#16a34a'] },
+            tooltip: {
+                fixed: { enabled: false },
+                x: { show: false },
+                y: { title: { formatter: (seriesName) => 'Return' } },
+                marker: { show: false }
+            }
         };
-        var chartPortfolio = new ApexCharts(document.querySelector("#chart-portfolio"), optionsPortfolio);
-        chartPortfolio.render();
+        var chart1 = new ApexCharts(document.querySelector("#chart-portfolio"), optionsPortfolio);
+        chart1.render();
 
-        // --- Chart 2: Savings Identified ---
+        // Chart 2: Savings (Bar Chart)
         var optionsSavings = {
-          series: [{ data: [0.2, 0.4, 0.3, 0.5] }],
-          chart: { type: 'bar', height: 60, sparkline: { enabled: true } },
-          tooltip: {
-            x: { show: false },
-            y: { title: { formatter: () => 'Savings' }, formatter: (val) => `£${val}M` },
-            marker: { show: false }
-          },
-          colors: ['#7a2828'], // var(--color-primary-medium)
-          plotOptions: { bar: { columnWidth: '60%', borderRadius: 3 } },
+            series: [{ data: [30, 40, 45, 50, 49, 60] }],
+            chart: { type: 'bar', height: 100, sparkline: { enabled: true } },
+            plotOptions: { bar: { columnWidth: '60%', colors: { ranges: [{ from: 0, to: 100, color: 'var(--color-primary-medium)' }] } } },
+            xaxis: { categories: ['Q1', 'Q2', 'Q3', 'Q4', 'Q1_Next', 'Q2_Next'] },
+            tooltip: {
+                fixed: { enabled: false },
+                x: { show: false },
+                y: { title: { formatter: (seriesName) => 'Savings Identified' } },
+                marker: { show: false }
+            }
         };
-        var chartSavings = new ApexCharts(document.querySelector("#chart-savings"), optionsSavings);
-        chartSavings.render();
-        
+        var chart2 = new ApexCharts(document.querySelector("#chart-savings"), optionsSavings);
+        chart2.render();
     </script>
 </body>
 </html>
