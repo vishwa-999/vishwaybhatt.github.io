@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <!-- 4. We are loading icons (for stats and links) -->
+    <!-- FIXED: Corrected 'type.module"' to 'type="module"' -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- 5. We are loading ApexCharts for the KPI dashboard visuals -->
@@ -40,6 +41,8 @@
         
         /* Custom classes */
         .bg-primary-dark { background-color: var(--color-primary-dark); }
+        .bg-primary-medium { background-color: var(--color-primary-medium); }
+        .bg-primary-accent { background-color: var(--color-primary-accent); }
         .text-primary-medium { color: var(--color-primary-medium); }
         .text-primary-light { color: var(--color-primary-light-bg); }
         .text-primary-dark { color: var(--color-primary-dark); }
@@ -66,6 +69,12 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Classes for new KPI Scorecard */
+        .bg-primary-dark-10 { background-color: rgba(47, 9, 9, 0.1); }
+        .bg-emerald-50 { background-color: #f0fdf4; }
+        .text-emerald-700 { color: #047857; }
+        .border-emerald-100 { border-color: #d1fae5; }
     </style>
 </head>
 <body class="antialiased">
@@ -76,7 +85,6 @@
             <div>
                 <a href="index.html" class="text-2xl font-bold text-primary-dark">Vishwa Y Bhatt</a>
             </div>
-            <!-- UPDATED: Links now point to new about.html page -->
             <div class="hidden md:flex space-x-6">
                 <a href="#dashboard" class="text-gray-600 hover:text-primary-medium font-medium">Dashboard</a>
                 <a href="#skills" class="text-gray-600 hover:text-primary-medium font-medium">Core Skills</a>
@@ -106,7 +114,6 @@
         <!-- ===== KPI DASHBOARD (UPDATED) ===== -->
         <section id="dashboard" class="mt-20">
             <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8 fade-in">Professional Dashboard</h2>
-            <!-- UPDATED: Added h-full to cards for alignment -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- KPI 1: Portfolio (UPDATED) -->
@@ -318,27 +325,29 @@
                     </div>
                 </div>
 
-                <!-- Item 3: Urban Science -->
+                <!-- Item 3: Urban Science (UPDATED DATES) -->
                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
                         <ion-icon name="bar-chart-outline" class="mx-auto text-white text-xl"></ion-icon>
                     </div>
                     <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
-                        <p class="text-sm font-medium text-primary-medium">2022 – 2023</p>
+                        <!-- UPDATED DATES -->
+                        <p class="text-sm font-medium text-primary-medium">June 2022 – Dec 2023</p>
                         <h3 class="font-bold text-gray-900 text-lg">Finance & Business Analyst</h3>
                         <p class="text-sm text-gray-600">Urban Science (UK)</p>
                     </div>
                 </div>
                 
-                <!-- Item 4: Shanro -->
+                <!-- Item 4: Shanro (UPDATED DATES) -->
                 <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-primary-dark shadow-xl w-10 h-10 rounded-full">
                         <ion-icon name="podium-outline" class="mx-auto text-white text-xl"></ion-icon>
                     </div>
                     <div class="order-1 bg-white rounded-2xl shadow-xl w-5/12 px-6 py-4 card-gradient border border-gray-200">
-                        <p class="text-sm font-medium text-primary-medium">2015 – 2021</p>
+                        <!-- UPDATED DATES -->
+                        <p class="text-sm font-medium text-primary-medium">March 2014 – Sep 2021</p>
                         <h3 class="font-bold text-gray-900 text-lg">Senior Finance Manager</h3>
                         <p class="text-sm text-gray-600">Shanro Key Chem</p>
                     </div>
@@ -361,27 +370,108 @@
 
         <!-- ===== NEW: COMMUNITY & LEADERSHIP (MOVED HERE) ===== -->
         <section id="community" class="mt-24 md:mt-32">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Community & Leadership</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Volunteering 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Mentor & Community Volunteer</h3>
-                    <p class="font-medium text-primary-medium mb-4">Samvardhan Trust (2012 – Present)</p>
-                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                        <li>Organise and lead child education camps in rural villages.</li>
-                        <li>Run workshops for farmer families on financial literacy, money management, and micro-finance.</li>
-                        <li>Lead women's empowerment seminars to foster financial independence.</li>
-                    </ul>
+            <!-- This is the new KPI Scorecard section -->
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+                Community & Leadership Scorecard
+            </h2>
+     
+            <div class="grid gap-6 md:grid-cols-3">
+                <!-- KPI 1: RED Award -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <!-- Trophy icon -->
+                            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-dark-10 text-primary-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                                        d="M8 21h8m-4-4v4m7-16h-3V4a1 1 0 00-1-1H7a1 1 0 00-1 1v1H3a2 2 0 002 2h1a6 6 0 006 6 6 6 0 006-6h1a2 2 0 002-2z" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-wide text-gray-500">Award</p>
+                                <h3 class="text-lg font-semibold text-gray-900">RED Award – University of Reading</h3>
+                            </div>
+                        </div>
+                        <!-- integrity tag -->
+                        <span class="px-2.5 py-1 text-xs rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">Integrity</span>
+                    </div>
+     
+                    <div class="mt-4 text-sm text-gray-600">
+                        Recognised for <span class="font-medium text-gray-800">leadership</span>, <span class="font-medium text-gray-800">multitasking</span> & <span class="font-medium text-gray-800">community engagement</span>.
+                    </div>
+     
+                    <!-- skill chips -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 rounded-full bg-primary-accent text-primary-dark">Team Leadership</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-primary-accent text-primary-dark">Initiative</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-primary-accent text-primary-dark">Campus Impact</span>
+                    </div>
                 </div>
-                <!-- Achievements -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 h-full">
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">University Leadership & Awards</h3>
-                    <p class="font-medium text-primary-medium mb-4">University of Reading & Gujarat State University</p>
-                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                        <li>**Student Ambassador:** Acted as a key university representative and raised over £6,500 for the annual fund.</li>
-                        <li>**RED Award Recipient:** Recognised for outstanding leadership, multitasking, and community engagement.</li>
-                        <li>**Founder:** Established the Finance & Entrepreneurship Committees at Gujarat State University.</li>
-                    </ul>
+     
+                <!-- KPI 2: Student Ambassador & Fundraising -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <!-- Heart/hand icon -->
+                        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-dark-10 text-primary-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                                    d="M3.172 5.172a4 4 0 015.656 0L12 8.343l3.172-3.171a4 4 0 115.656 5.656L12 20.657 3.172 11.828a4 4 0 010-5.656z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="text-xs uppercase tracking-wide text-gray-500">Ambassador & Fundraiser</p>
+                            <h3 class="text-lg font-semibold text-gray-900">University of Reading</h3>
+                        </div>
+                    </div>
+     
+                    <!-- headline metric -->
+                    <div class="mt-4">
+                        <p class="text-2xl font-bold text-gray-900">£6,500+</p>
+                        <p class="text-xs uppercase tracking-wide text-gray-500">raised for the annual fund</p>
+                    </div>
+     
+                    <!-- micro context line -->
+                    <p class="mt-3 text-sm text-gray-600">Public speaking, donor outreach, and event coordination to support student initiatives.</p>
+     
+                    <!-- thin progress bar just as a visual flourish -->
+                    <div class="mt-4 h-2 w-full bg-primary-accent rounded-full overflow-hidden">
+                        <div class="h-2 bg-primary-medium w-3/4 rounded-full"></div>
+                    </div>
+                </div>
+     
+                <!-- KPI 3: Founder – Committees -->
+                <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                    <div class="flex items-center gap-3">
+                        <!-- Flag/users icon -->
+                        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-dark-10 text-primary-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                                    d="M4 6h7l1 2h8v9h-7l-1-2H4V6zM4 20h16" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="text-xs uppercase tracking-wide text-gray-500">Founder</p>
+                            <h3 class="text-lg font-semibold text-gray-900">Finance & Entrepreneurship Committees</h3>
+                            <p class="text-sm text-gray-500">Gujarat State University</p>
+                        </div>
+                    </div>
+     
+                    <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+                        <div class="p-3 rounded-xl bg-primary-accent/50">
+                            <p class="text-xs text-gray-500">Initiatives Launched</p>
+                            <p class="font-semibold text-primary-dark">Student Clinics, Guest Talks</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-primary-accent/50">
+                            <p class="text-xs text-gray-500">Focus</p>
+                            <p class="font-semibold text-primary-dark">Financial Literacy & Startups</p>
+                        </div>
+                    </div>
+     
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 rounded-full bg-primary-accent text-primary-dark">Programme Design</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-primary-accent text-primary-dark">Community Building</span>
+                        <span class="text-xs px-2 py-1 rounded-full bg-primary-accent text-primary-dark">Mentoring</span>
+                    </div>
                 </div>
             </div>
         </section>
