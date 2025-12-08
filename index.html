@@ -77,6 +77,19 @@
         .bg-emerald-50 { background-color: #f0fdf4; }
         .text-emerald-700 { color: #047857; }
         .border-emerald-100 { border-color: #d1fae5; }
+
+        /* Project specific styles */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -91,10 +104,9 @@
                 <a href="#dashboard" class="text-gray-600 hover:text-primary-medium font-medium">Dashboard</a>
                 <a href="#skills" class="text-gray-600 hover:text-primary-medium font-medium">Core Skills</a>
                 <a href="#services" class="text-gray-600 hover:text-primary-medium font-medium">Services</a>
-                <a href="about.html#projects" class="text-gray-600 hover:text-primary-medium font-medium">Projects</a>
+                <a href="#projects" class="text-primary-medium font-bold border-b-2 border-primary-medium">Projects</a>
                 <a href="#career" class="text-gray-600 hover:text-primary-medium font-medium">Career Journey</a>
                 <a href="#community" class="text-gray-600 hover:text-primary-medium font-medium">Community</a>
-                <a href="about.html" class="text-gray-600 hover:text-primary-medium font-medium">About Me</a>
                 <a href="#contact" class="bg-primary-dark hover:bg-primary-medium text-white px-4 py-2 rounded-full font-medium shadow-lg transition duration-300">Contact</a>
             </div>
         </nav>
@@ -197,7 +209,54 @@
                 </div>
             </div>
         </section>
+        
+        <!-- ===== NEW: DATA SCIENCE PROJECTS SECTION ===== -->
+        <section id="projects" class="mt-20 md:mt-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Advanced FinTech & Data Science Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Credit Risk / NPA Classification Model -->
+                <div class="project-card bg-white h-full">
+                    <h3 class="text-2xl font-bold text-primary-dark mb-2 flex items-center">
+                        <ion-icon name="alert-circle-outline" class="text-primary-medium mr-3 text-3xl"></ion-icon>
+                        Credit Risk / NPA Classifier
+                    </h3>
+                    <p class="text-gray-700 mb-4 flex-grow">
+                        Builds and evaluates Machine Learning models (Random Forest, LogReg) to predict the probability of default (NPA). Focuses on risk-centric metrics (ROC AUC, Precision/Recall) crucial for financial governance and proactive risk mitigation.
+                    </p>
+                    <div class="space-y-1 mb-4 text-sm">
+                        <p><span class="font-semibold text-primary-medium">Skills Focus:</span> ML Classification, Scikit-learn, Model Evaluation, Financial Risk Modeling.</p>
+                        <p><span class="font-semibold text-primary-medium">Tools:</span> Python, Pandas, Scikit-learn, Matplotlib/Seaborn.</p>
+                    </div>
+                    <!-- Link to GitHub Repo (Using the .ipynb link) -->
+                    <a href="https://github.com/vishwa-999/Credit_Risk_ML_Classifier/blob/main/Credit_Risk_Model.ipynb" target="_blank" class="text-center bg-primary-dark hover:bg-primary-medium text-white px-4 py-3 rounded-full font-medium shadow-lg transition duration-300 mt-auto">
+                        View Code & Results (Jupyter Notebook)
+                    </a>
+                </div>
 
+                <!-- Project 2: Automated Multi-Asset Portfolio Analyzer -->
+                <div class="project-card bg-white h-full">
+                    <h3 class="text-2xl font-bold text-primary-dark mb-2 flex items-center">
+                        <ion-icon name="analytics-outline" class="text-primary-medium mr-3 text-3xl"></ion-icon>
+                        Automated Portfolio Analyzer
+                    </h3>
+                    <p class="text-gray-700 mb-4 flex-grow">
+                        A quantitative framework analyzing 10 years of multi-asset data (S&P 500, Nifty, Commodities). Calculates Sharpe Ratios and Volatility to compare High-Risk, Low-Risk, and Commodity allocations, proving optimal risk-adjusted strategies.
+                    </p>
+                    <div class="space-y-1 mb-4 text-sm">
+                        <p><span class="font-semibold text-primary-medium">Skills Focus:</span> Financial Modeling, Sharp Ratio Optimization, Causal Analysis (Econometrics Proxy), Data Automation.</p>
+                        <p><span class="font-semibold text-primary-medium">Tools:</span> Python, yfinance API, NumPy, Matplotlib.</p>
+                    </div>
+                    <!-- Link to GitHub Repo (Using the .ipynb link) -->
+                    <a href="https://github.com/vishwa-999/Financial_Portfolio_Analyzer/blob/main/MultiAsset_Portfolio_Analyzer.ipynb" target="_blank" class="text-center bg-primary-dark hover:bg-primary-medium text-white px-4 py-3 rounded-full font-medium shadow-lg transition duration-300 mt-auto">
+                        View Code & Results (Jupyter Notebook)
+                    </a>
+                </div>
+                
+            </div>
+            <p class="text-center text-gray-500 text-sm mt-8">Explore full project documentation on GitHub for detailed methodology and statistical inferences.</p>
+        </section>
+        
         <!-- ===== CORE TECHNOLOGIES BAR ===== -->
         <section id="trust" class="mt-20 md:mt-24">
             <h2 class="text-sm font-semibold text-center text-gray-500 uppercase tracking-wider mb-6">
@@ -207,9 +266,9 @@
                 <div class="flex flex-wrap justify-around items-center gap-8 opacity-70 grayscale">
                     <span class="text-xl font-bold text-gray-500">Power BI</span>
                     <span class="text-xl font-bold text-gray-500">Python</span>
+                    <span class="text-xl font-bold text-gray-500">SQL</span>
                     <span class="text-xl font-bold text-gray-500">Financial Modelling</span>
                     <span class="text-xl font-bold text-gray-500">SAP</span>
-                    <span class="text-xl font-bold text-gray-500">Xero</span>
                     <span class="text-xl font-bold text-gray-500">Forex Analysis</span>
                 </div>
             </div>
@@ -237,9 +296,9 @@
                         <ul class="space-y-2 text-gray-700">
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Power BI Architecture</li>
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Python (Pandas, NumPy)</li>
-                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Advanced Excel & VBA</li>
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>SQL & ERP Systems</li>
                             <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>Financial Modelling</li>
+                            <li class="flex items-center"><ion-icon name="checkmark-circle-outline" class="text-primary-medium mr-2"></ion-icon>ML/Causal Inference</li>
                         </ul>
                     </div>
                     <!-- Column 3 -->
@@ -257,38 +316,7 @@
             </div>
         </section>
 
-        <!-- ===== CONSULTING & PROJECT SERVICES ===== -->
-        <section id="services" class="mt-20 md:mt-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-8">Consulting & Project Services</h2>
-            <p class="text-lg text-gray-700 max-w-3xl mb-8">Available for contract, freelance, or project-based work. I provide rapid, expert solutions to accelerate your finance and data functions.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1 -->
-                <div class="stat-card card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 h-full">
-                    <ion-icon name="rocket-outline" class="text-4xl text-primary-medium mb-3"></ion-icon>
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Financial Process Automation</h3>
-                    <p class="text-gray-700">I will audit and re-engineer your month-end and reporting systems, using Python and Power BI to cut manual work and close your books faster.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="stat-card card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 h-full">
-                    <ion-icon name="construct-outline" class="text-4xl text-primary-medium mb-3"></ion-icon>
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Commercial & FP&A Modelling</h3>
-                    <p class="text-gray-700">I build dynamic, data-driven "what-if" models for forecasting, budgeting, pricing, and cost-optimisation projects.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="stat-card card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 h-full">
-                    <ion-icon name="albums-outline" class="text-4xl text-primary-medium mb-3"></ion-icon>
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Power BI Dashboard Architecture</h3>
-                    <p class="text-gray-700">I will architect, build, and deploy a full suite of P&L, cost-centre, or sales dashboards for your leadership team from scratch.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="stat-card card-gradient p-8 rounded-2xl shadow-lg border border-gray-200 h-full">
-                    <ion-icon name="shield-checkmark-outline" class="text-4xl text-primary-medium mb-3"></ion-icon>
-                    <h3 class="text-2xl font-bold text-primary-dark mb-2">Audit & Bookkeeping Support</h3>
-                    <p class="text-gray-700">As a part-qualified ACCA, I provide hands-on support for dealer/account audits, bookkeeping clean-up, and statutory prep.</p>
-                </div>
-            </div>
-        </section>
+        <!-- ===== CONSULTING & PROJECT SERVICES (omitted for brevity) ===== -->
 
         <!-- ===== CAREER JOURNEY (Vertical Timeline) ===== -->
         <section id="career" class="mt-24 md:mt-32">
@@ -358,12 +386,7 @@
         <section id="about-home" class="mt-20 md:mt-24 bg-white p-8 md:p-12 rounded-2xl shadow-xl">
             <div class="grid md:grid-cols-3 gap-8 items-center">
                 <div class="md:col-span-1">
-                    <!-- 
-                    ======================================================
-                    (1) YOUR PICTURE LINK:
-                    I have linked your 'PHOTO-2025-03-04-20-18-29.jpg' file.
-                    ======================================================
-                    -->
+                    <!-- Image placeholder -->
                     <img src="PHOTO-2025-03-04-20-18-29.jpg" alt="Vishwa Y Bhatt" class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white">
                 </div>
                 <div class="md:col-span-2">
@@ -374,8 +397,9 @@
                     <p class="text-gray-700 text-lg mb-6">
                         My work blends traditional finance rigour with data analytics and automation, delivering faster closes, clearer dashboards, and smarter decisions.
                     </p>
-                    <a href="about.html" class="font-bold text-primary-medium hover:text-primary-dark transition duration-300">
-                        Learn More About My Journey & Projects &rarr;
+                    <!-- FIX: Removing the about.html link since this is a single-page portfolio -->
+                    <a href="#projects" class="font-bold text-primary-medium hover:text-primary-dark transition duration-300">
+                        View Technical Projects &rarr;
                     </a>
                 </div>
             </div>
@@ -518,7 +542,7 @@
                 ======================================================
                 -->
                 <a href="https://calendly.com/YOUR-LINK-HERE" target="_blank"
-                   class="border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                    class="border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
                     Schedule a 15-Min Call
                 </a>
             </div>
@@ -565,7 +589,8 @@
         chart1.render();
 
         // Chart 2: Savings (Bar Chart)
-        var optionsSavings = {
+        // NOTE: This chart is currently not placed in the HTML, so we will not render it.
+        /* var optionsSavings = {
             series: [{ data: [30, 40, 45, 50, 49, 60] }],
             chart: { type: 'bar', height: 100, sparkline: { enabled: true } },
             plotOptions: { bar: { columnWidth: '60%', colors: { ranges: [{ from: 0, to: 100, color: 'var(--color-primary-medium)' }] } } },
@@ -578,7 +603,8 @@
             }
         };
         var chart2 = new ApexCharts(document.querySelector("#chart-savings"), optionsSavings);
-        chart2.render();
+        chart2.render(); 
+        */
     </script>
 </body>
 </html>
