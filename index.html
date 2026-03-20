@@ -1,352 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
-    <title>Vishwa Y Bhatt | Strategic Business Advisor & Finance Manager</title>
-    <meta name="description" content="Dynamic Finance Manager and Strategic Business Advisor bridging the gap between traditional finance, data analytics, and technology. Expertise in FP&A, Python, Power BI, and multi-site operations.">
+    <title>Vishwa Y Bhatt | Finance & Data Transformation (Growth Curve Theme)</title> 
+    <meta name="description" content="Senior Finance Manager / Analyst in the UK (Crawley, West Sussex). Part-qualified ACCA with expertise in Financial Control, Management Accounts, Xero, Payroll, and data-driven transformation for the professional services sector."> 
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script> 
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet"> 
     
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
 
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> 
     
-    <style>
-        /* ===== GROWTH CURVE OFFICIAL PALETTE (BLUE) ===== */
-        :root {
-            --color-gc-primary-blue: #275CFF; /* Main buttons, headers */
-            --color-gc-deep-navy: #001A4D; /* Text on light areas */
-            --color-gc-soft-white: #F9FAFF; /* Clean background */
-            --color-gc-accent-light: #E7EEFF; /* Background panels/cards */
-            --color-gc-contrast-black: #111111; /* High-readability text */
-        }
+    <style> 
+        /* ===== GROWTH CURVE OFFICIAL PALETTE (BLUE) ===== */ 
+        :root { 
+            --color-gc-primary-blue: #275CFF; /* Main buttons, headers */ 
+            --color-gc-deep-navy: #001A4D; /* Text on light areas */ 
+            --color-gc-soft-white: #F9FAFF; /* Clean background */ 
+            --color-gc-accent-light: #E7EEFF; /* Background panels/cards */ 
+            --color-gc-contrast-black: #111111; /* High-readability text */ 
+        } 
         
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-gc-soft-white);
-            color: var(--color-gc-deep-navy);
-        }
+        html { scroll-behavior: smooth; } 
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--color-gc-soft-white); 
+            color: var(--color-gc-deep-navy); 
+        } 
         
-        /* Custom classes */
-        .bg-gc-primary-blue { background-color: var(--color-gc-primary-blue); }
-        .bg-gc-deep-navy { background-color: var(--color-gc-deep-navy); }
-        .bg-gc-accent-light { background-color: var(--color-gc-accent-light); }
-        .text-gc-primary-blue { color: var(--color-gc-primary-blue); }
-        .text-gc-deep-navy { color: var(--color-gc-deep-navy); }
+        /* Custom classes */ 
+        .bg-gc-primary-blue { background-color: var(--color-gc-primary-blue); } 
+        .bg-gc-deep-navy { background-color: var(--color-gc-deep-navy); } 
+        .bg-gc-accent-light { background-color: var(--color-gc-accent-light); } 
+        .text-gc-primary-blue { color: var(--color-gc-primary-blue); } 
+        .text-gc-deep-navy { color: var(--color-gc-deep-navy); } 
         
-        /* Hero section specific style for high impact */
-        .hero-title {
-            background-color: var(--color-gc-accent-light);
-            padding: 1rem 2.5rem;
-            border-radius: 9999px; /* Pill shape */
-            display: inline-block;
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--color-gc-deep-navy);
-            border: 1px solid var(--color-gc-primary-blue);
-            letter-spacing: 0.05em; 
-        }
+        /* Hero section specific style for high impact */ 
+        .hero-title { 
+            background-color: var(--color-gc-accent-light); 
+            padding: 1rem 2.5rem; 
+            border-radius: 9999px; /* Pill shape */ 
+            display: inline-block; 
+            font-size: 1.25rem; 
+            font-weight: 800; 
+            color: var(--color-gc-deep-navy); 
+            border: 1px solid var(--color-gc-primary-blue); 
+            letter-spacing: 0.05em;  
+        } 
 
-        /* Stat Card Styling */
-        .stat-card {
-            border-radius: 1.5rem; 
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .stat-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-        }
-        .kpi-icon-bg {
-            background-color: var(--color-gc-primary-blue);
-            color: white;
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 0.75rem; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
-</head>
-<body class="antialiased">
+        /* Stat Card Styling */ 
+        .stat-card { 
+            border-radius: 1.5rem;  
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);  
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        } 
+        .stat-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); 
+        } 
+        .kpi-icon-bg { 
+            background-color: var(--color-gc-primary-blue); 
+            color: white; 
+            width: 3.5rem; 
+            height: 3.5rem; 
+            border-radius: 0.75rem;  
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        } 
+    </style> 
+</head> 
+<body class="antialiased"> 
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div>
-                <a href="index.html" class="text-2xl font-black text-gc-deep-navy">Vishwa Y Bhatt</a>
-            </div>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#dashboard" class="text-gray-600 hover:text-gc-primary-blue font-medium">Results</a>
-                <a href="#projects" class="text-gray-600 hover:text-gc-primary-blue font-medium">Projects</a>
-                <a href="#skills" class="text-gray-600 hover:text-gc-primary-blue font-medium">Tech Stack</a>
-                <a href="#career" class="text-gray-600 hover:text-gc-primary-blue font-medium">Journey</a>
-                <a href="#contact" class="bg-gc-primary-blue hover:bg-gc-deep-navy text-white px-6 py-3 rounded-full font-black shadow-2xl transition duration-300 transform hover:scale-105">
-                    CONTACT ME
-                </a>
-            </div>
-        </nav>
-    </header>
+    <header class="bg-white shadow-md sticky top-0 z-50"> 
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center"> 
+            <div> 
+                <a href="index.html" class="text-2xl font-black text-gc-deep-navy">Vishwa Y Bhatt</a> 
+            </div> 
+            <div class="hidden md:flex space-x-6 items-center"> 
+                <a href="#dashboard" class="text-gray-600 hover:text-gc-primary-blue font-medium">Results</a> 
+                <a href="#projects" class="text-gray-600 hover:text-gc-primary-blue font-medium">Projects</a> 
+                <a href="testimonials.html" class="text-gray-600 hover:text-gc-primary-blue font-black">TESTIMONIALS</a> 
+                <a href="#skills" class="text-gray-600 hover:text-gc-primary-blue font-medium">Tech Stack</a> 
+                <a href="#career" class="text-gray-600 hover:text-gc-primary-blue font-medium">Journey</a> 
+                <a href="#contact" class="bg-gc-primary-blue hover:bg-gc-deep-navy text-white px-6 py-3 rounded-full font-black shadow-2xl transition duration-300 transform hover:scale-105"> 
+                    START GROWTH 
+                </a> 
+            </div> 
+        </nav> 
+    </header> 
 
-    <main class="container mx-auto px-6 py-16 md:py-24">
+    <main class="container mx-auto px-6 py-16 md:py-24"> 
 
-        <section id="hero" class="text-center">
-            <p class="hero-title mx-auto">
-                FINANCE MANAGER & STRATEGIC BUSINESS ADVISOR
-            </p>
-            <h1 class="text-5xl md:text-7xl font-black text-gc-deep-navy leading-snug mt-6 fade-in">
-                Bridging **Finance**, **Data Analytics**, and <span class="text-gc-primary-blue">Technology</span>.
-            </h1>
-            <p class="mt-8 text-lg md:text-xl text-gray-700 max-w-4xl mx-auto fade-in" style="animation-delay: 0.2s;">
-                Modernising legacy financial systems, automating complex reporting workflows, and translating multi-site datasets into actionable, board-level insights to optimise commercial performance.
-            </p>
-            <div class="mt-8 flex flex-col items-center justify-center gap-4">
-                <a href="#contact" class="inline-block bg-gc-primary-blue hover:bg-gc-deep-navy text-white px-10 py-4 rounded-full font-black text-lg shadow-2xl transition duration-300 transform hover:scale-105">
-                    DISCOVER MY IMPACT &rarr;
-                </a>
-            </div>
-        </section>
+        <section id="hero" class="text-center"> 
+            <p class="hero-title mx-auto"> 
+                FINANCE & DATA TRANSFORMATION SPECIALIST 
+            </p> 
+            <h1 class="text-5xl md:text-7xl font-black text-gc-deep-navy leading-snug mt-6 fade-in"> 
+                I deliver **Control**, **Bookkeeping** and accelerate your <span class="text-gc-primary-blue">growth curve</span>. 
+            </h1> 
+            <p class="mt-8 text-lg md:text-xl text-gray-700 max-w-4xl mx-auto fade-in" style="animation-delay: 0.2s;"> 
+                Bridging **Financial Control** with **Autonomy** to take ownership of operations, maintain accurate management accounts, and solve the problem of **messy, unconsolidated data**. 
+            </p> 
+            <div class="mt-8 flex flex-col items-center justify-center gap-4"> 
+                <a href="#contact" class="inline-block bg-gc-primary-blue hover:bg-gc-deep-navy text-white px-10 py-4 rounded-full font-black text-lg shadow-2xl transition duration-300 transform hover:scale-105"> 
+                    DISCOVER YOUR NEXT GROWTH PHASE &rarr; 
+                </a> 
+                <a href="testimonials.html" class="inline-block border-2 border-gray-400 text-gray-600 font-bold px-6 py-2 rounded-full transition duration-300 hover:bg-gray-100"> 
+                    VIEW STAKEHOLDER METRICS &rarr; 
+                </a> 
+            </div> 
+        </section> 
 
-        <section id="dashboard" class="mt-20 md:mt-28">
-            <h2 class="text-3xl md:text-4xl font-black text-gc-deep-navy mb-12 text-center">My Proven Impact & Results</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section id="dashboard" class="mt-20 md:mt-28"> 
+            <h2 class="text-3xl md:text-4xl font-black text-gc-deep-navy mb-12 text-center">My Proven Impact & Results</h2> 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> 
                 
-                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in">
-                    <div>
-                        <div class="kpi-icon-bg mb-4">
-                            <ion-icon name="wallet-outline" class="text-2xl"></ion-icon>
-                        </div>
-                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">Identified Savings</p>
-                        <p class="text-3xl font-black text-gc-deep-navy mt-1">£1.5M+</p>
-                        <p class="text-sm text-gray-600 mt-3">Context: Led deep-dive procurement analysis and third-party spend approvals to secure millions in savings integrated into companywide cost-controls.</p>
-                    </div>
-                </div>
+                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in"> 
+                    <div> 
+                        <div class="kpi-icon-bg mb-4"> 
+                            <ion-icon name="wallet-outline" class="text-2xl"></ion-icon> 
+                        </div> 
+                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">Identified Savings</p> 
+                        <p class="text-3xl font-black text-gc-deep-navy mt-1">£1.5M+ p.a.</p> 
+                        <p class="text-sm text-gray-600 mt-3">Context: Led deep-dive procurement analysis and third-party spend approvals to secure millions in savings.</p> 
+                    </div> 
+                </div> 
 
-                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in" style="animation-delay: 0.1s;">
-                    <div>
-                        <div class="kpi-icon-bg mb-4">
-                            <ion-icon name="speedometer-outline" class="text-2xl"></ion-icon>
-                        </div>
-                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">Process Automation</p>
-                        <p class="text-3xl font-black text-gc-deep-navy mt-1">40-60% Faster</p>
-                        <p class="text-sm text-gray-600 mt-3">Impact: Utilised Python and Power BI to automate key financial reporting and ESG dashboards, ensuring 100% audit-readiness and drastically reducing manual hours.</p>
-                    </div>
-                </div>
+                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in" style="animation-delay: 0.1s;"> 
+                    <div> 
+                        <div class="kpi-icon-bg mb-4"> 
+                            <ion-icon name="speedometer-outline" class="text-2xl"></ion-icon> 
+                        </div> 
+                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">Process Automation</p> 
+                        <p class="text-3xl font-black text-gc-deep-navy mt-1">60% Time Saved</p> 
+                        <p class="text-sm text-gray-600 mt-3">Impact: Cut end-to-end reporting cycle from 5 days to 2 days, significantly reducing human error and improving forecast accuracy.</p> 
+                    </div> 
+                </div> 
 
-                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in" style="animation-delay: 0.2s;">
-                    <div>
-                        <div class="kpi-icon-bg mb-4">
-                            <ion-icon name="business-outline" class="text-2xl"></ion-icon>
-                        </div>
-                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">Multi-Site Operations</p>
-                        <p class="text-3xl font-black text-gc-deep-navy mt-1">250+ Accounts</p>
-                        <p class="text-sm text-gray-600 mt-3">Context: Managed complex budgets, compliance, and rigorous financial audits across massive decentralised networks (including Aston Martin & Mercedes-Benz).</p>
-                    </div>
-                </div>
-
-                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in" style="animation-delay: 0.3s;">
-                    <div>
-                        <div class="kpi-icon-bg mb-4">
-                            <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
-                        </div>
-                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">Variance Reduction</p>
-                        <p class="text-3xl font-black text-gc-deep-navy mt-1">75% Improved</p>
-                        <p class="text-sm text-gray-600 mt-3">Result: Built integrated forecasting models and ROI business cases for contract restructuring, massively reducing budget-to-actual variance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="projects" class="mt-20 md:mt-28">
-            <h2 class="text-3xl md:text-4xl font-bold text-gc-deep-navy mb-12 text-center">Data-Driven Transformation Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <div class="stat-card bg-white p-8 border-2 border-gc-accent-light h-full">
-                    <h3 class="text-2xl font-bold text-gc-deep-navy mb-4 flex items-center">
-                        <ion-icon name="alert-circle-outline" class="text-gc-primary-blue mr-3 text-3xl"></ion-icon>
-                        Credit Risk / NPA Classifier
-                    </h3>
-                    <p class="text-gray-700 mb-5 flex-grow">
-                        Built and evaluated Machine Learning models (Random Forest, LogReg) to predict **Non-Performing Asset (NPA) probability**. Focuses on risk-centric metrics crucial for financial governance and proactive lending risk mitigation.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs font-black mt-auto">
-                        <span class="bg-gc-accent-light text-gc-deep-navy px-3 py-1 rounded-full">ML Classification</span>
-                        <span class="bg-gc-accent-light text-gc-deep-navy px-3 py-1 rounded-full">Python (Scikit-learn)</span>
-                        <span class="bg-gc-accent-light text-gc-deep-navy px-3 py-1 rounded-full">Risk Modeling</span>
-                    </div>
-                    <a href="https://github.com/vishwa-999/Credit_Risk_ML_Classifier/blob/main/Credit_Risk_Model.ipynb" target="_blank" class="inline-block text-center bg-gc-primary-blue hover:bg-gc-deep-navy text-white px-5 py-3 rounded-full font-black shadow-lg transition duration-300 mt-6">
-                        VIEW PROJECT &rarr;
-                    </a>
-                </div>
-
-                <div class="stat-card bg-white p-8 border-2 border-gc-accent-light h-full">
-                    <h3 class="text-2xl font-bold text-gc-deep-navy mb-4 flex items-center">
-                        <ion-icon name="analytics-outline" class="text-gc-primary-blue mr-3 text-3xl"></ion-icon>
-                        Automated Portfolio Analyzer
-                    </h3>
-                    <p class="text-gray-700 mb-5 flex-grow">
-                        A quantitative framework analyzing 10 years of multi-asset data (S&P 500, Commodities). Calculates **Sharpe Ratios** and Volatility to compare risk-adjusted strategies, demonstrating deep **quantitative modeling** skills.
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs font-black mt-auto">
-                        <span class="bg-gc-accent-light text-gc-deep-navy px-3 py-1 rounded-full">Sharpe Optimization</span>
-                        <span class="bg-gc-accent-light text-gc-deep-navy px-3 py-1 rounded-full">Python (yfinance API)</span>
-                        <span class="bg-gc-accent-light text-gc-deep-navy px-3 py-1 rounded-full">Financial Modeling</span>
-                    </div>
-                    <a href="https://github.com/vishwa-999/Financial_Portfolio_Analyzer/blob/main/MultiAsset_Portfolio_Analyzer.ipynb" target="_blank" class="inline-block text-center bg-gc-primary-blue hover:bg-gc-deep-navy text-white px-5 py-3 rounded-full font-black shadow-lg transition duration-300 mt-6">
-                        VIEW PROJECT &rarr;
-                    </a>
-                </div>
-                
-            </div>
-        </section>
-        
-        <section id="skills" class="mt-20 md:mt-28">
-            <h2 class="text-sm font-black text-center text-gray-500 uppercase tracking-widest mb-6">
-                CORE OPERATIONAL EXPERTISE
-            </h2>
-            <div class="bg-white rounded-2xl shadow-xl p-8 border border-gc-accent-light">
-                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-90 text-center">
-                    <span class="text-xl font-black text-gc-deep-navy">Business Partnering</span>
-                    <span class="text-xl font-black text-gc-deep-navy">Multi-Site Operations</span>
-                    <span class="text-xl font-black text-gc-deep-navy">Python & Power BI</span>
-                    <span class="text-xl font-black text-gc-deep-navy">Management Accounts</span>
-                    <span class="text-xl font-black text-gc-deep-navy">Financial Due Diligence</span>
-                    <span class="text-xl font-black text-gc-deep-navy">ERP Systems (SUN, Xero)</span>
-                    <span class="text-xl font-black text-gc-deep-navy">Budgeting & ROI Modelling</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-home" class="mt-20 md:mt-28 bg-white p-8 md:p-12 rounded-2xl shadow-xl border-2 border-gc-accent-light">
-            <div class="grid md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-1">
-                    <img src="IMG_0987.JPG" alt="Vishwa Y Bhatt" class="rounded-full shadow-lg mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-gc-primary-blue">
-                    <h2 class="text-2xl font-black text-gc-deep-navy mb-2 mt-6">Vishwa Y Bhatt</h2>
-                    <p class="text-sm font-bold text-gray-600">Part-Qualified ACCA</p>
-                    <p class="text-sm text-gray-600">MSc FinTech, University of Reading</p>
-                    <p class="text-sm text-gray-600">PhD Researcher, Econometrics</p>
-                </div>
-                <div class="md:col-span-2">
-                    <h2 class="text-3xl font-black text-gc-deep-navy mb-4">About My Journey</h2>
-                    <p class="text-gray-700 text-lg mb-4">
-                        My career has been dedicated to driving clarity, building trust, and creating efficiency across highly complex organizations. I translate the rigour of **Senior Finance Management** into measurable business outcomes, blending deep FP&A expertise with cutting-edge **FinTech** knowledge.
-                    </p>
-                    <p class="text-gray-700 text-lg mb-6">
-                        I specialise in navigating ambiguity to streamline operations, strengthen internal controls, and resolve the problem of messy data. From managing accounts for 250+ decentralised dealerships to modernising legacy financial systems, I deliver clean management accounts and actionable forecasts that free up leadership teams to focus on strategy.
-                    </p>
-                    <a href="#career" class="font-bold text-gc-primary-blue hover:text-gc-deep-navy transition duration-300 flex items-center gap-2">
-                        View Detailed Career Timeline &rarr;
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="career" class="mt-24 md:mt-32">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gc-deep-navy mb-16">Career Acceleration Timeline</h2>
-            
-            <div class="relative max-w-4xl mx-auto">
-                <div class="absolute left-1/2 w-1.5 bg-gc-primary-blue h-full -ml-1 rounded-full opacity-40 hidden md:block"></div>
-
-                <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
-                    <div class="order-1 md:w-5/12 hidden md:block"></div>
-                    <div class="z-20 flex items-center order-1 bg-gc-deep-navy shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
-                        <ion-icon name="rocket-outline" class="mx-auto text-white text-xl"></ion-icon>
-                    </div>
-                    <div class="order-1 bg-white rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-4 border-2 border-gc-accent-light">
-                        <p class="text-sm font-black text-gc-primary-blue">May 2025 – Present</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Finance Manager</h3>
-                        <p class="text-sm text-gray-600">Growth Curve Ltd. (UK) | <span class="font-semibold">£7.5k Monthly Operational Savings</span></p>
-                        <p class="text-xs text-gray-500 mt-2">Managed end-to-end financial operations, workforce budgeting, and built automated reporting structures from the ground up (Python/Power BI).</p>
-                    </div>
-                </div>
-
-                <div class="mb-8 flex flex-col md:flex-row justify-between md:flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 md:w-5/12 hidden md:block"></div>
-                    <div class="z-20 flex items-center order-1 bg-gc-deep-navy shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
-                        <ion-icon name="trending-up-outline" class="mx-auto text-white text-xl"></ion-icon>
-                    </div>
-                    <div class="order-1 bg-white rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-4 border-2 border-gc-accent-light">
-                        <p class="text-sm font-black text-gc-primary-blue">Jan 2024 – Apr 2025</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Finance & Business Development Manager</h3>
-                        <p class="text-sm text-gray-600">Agrocel Industries | <span class="font-semibold">£1.5M Savings Identified</span></p>
-                        <p class="text-xs text-gray-500 mt-2">Automated key financial reports (saving 100 hrs/month), managed third-party spend approvals, and championed robust data governance and ESG compliance.</p>
-                    </div>
-                </div>
-
-                <div class="mb-8 flex flex-col md:flex-row justify-between items-center w-full right-timeline">
-                    <div class="order-1 md:w-5/12 hidden md:block"></div>
-                    <div class="z-20 flex items-center order-1 bg-gc-deep-navy shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
-                        <ion-icon name="business-outline" class="mx-auto text-white text-xl"></ion-icon>
-                    </div>
-                    <div class="order-1 bg-white rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-4 border-2 border-gc-accent-light">
-                        <p class="text-sm font-black text-gc-primary-blue">Nov 2021 – Dec 2023</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Finance & Business Management Analyst</h3>
-                        <p class="text-sm text-gray-600">Urban Science (UK) | <span class="font-semibold">Managed 250+ Multi-Site Accounts</span></p>
-                        <p class="text-xs text-gray-500 mt-2">Acted as a Business Partner for cross-functional teams, auditing compliance and streamlining quarterly financial planning to cut reporting delays by 25%.</p>
-                    </div>
-                </div>
-                
-                <div class="mb-8 flex flex-col md:flex-row justify-between md:flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 md:w-5/12 hidden md:block"></div>
-                    <div class="z-20 flex items-center order-1 bg-gc-deep-navy shadow-xl w-10 h-10 rounded-full mb-4 md:mb-0">
-                        <ion-icon name="podium-outline" class="mx-auto text-white text-xl"></ion-icon>
-                    </div>
-                    <div class="order-1 bg-white rounded-2xl shadow-xl w-full md:w-5/12 px-6 py-4 border-2 border-gc-accent-light">
-                        <p class="text-sm font-black text-gc-primary-blue">March 2015 – Sep 2021</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Head of Finance & Accounting</h3>
-                        <p class="text-sm text-gray-600">Shanro Key Chem | <span class="font-semibold">Full Cycle P&L Ownership</span></p>
-                        <p class="text-xs text-gray-500 mt-2">Oversaw strategic cash flow planning, led financial due diligence for high-value capital proposals (₹20 Crore+), and secured vital project financing.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact" class="mt-20 md:mt-28 bg-gc-deep-navy rounded-3xl shadow-2xl p-8 md:p-16 text-center text-white">
-            <h2 class="text-4xl md:text-5xl font-black mb-4">READY FOR MEASURABLE FINANCIAL GROWTH?</h2>
-            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                Let's discuss how my blend of **strategic advisory, multi-site operations, and data automation** can support your business objectives.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                 <a href="Vishwa_Y_Bhatt_CV.pdf" target="_blank" 
-   class="bg-gc-primary-blue text-white font-black py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
-    DOWNLOAD CV (PDF)
-</a>
-                <a href="mailto:vishwaybhatt@gmail.com"
-                    class="border-2 border-gc-primary-blue text-gc-primary-blue bg-white font-black py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
-                    SEND AN EMAIL
-                </a>
-            </div>
-            
-            <div class="flex justify-center space-x-8 mt-12 text-gray-400">
-                <a href="https://www.linkedin.com/in/vishwabhatt" target="_blank" class="hover:text-gc-primary-blue transition duration-300">
-                    <ion-icon name="logo-linkedin" class="text-5xl"></ion-icon>
-                    <span class="block mt-1 text-sm">LinkedIn</span>
-                </a>
-                <a href="https://github.com/vishwa-999" target="_blank" class="hover:text-gc-primary-blue transition duration-300">
-                    <ion-icon name="logo-github" class="text-5xl"></ion-icon>
-                    <span class="block mt-1 text-sm">GitHub</span>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="text-center py-8 mt-12 bg-white border-t border-gray-100">
-        <p class="text-gray-600">&copy; <span id="year"></span> Vishwa Y Bhatt. All rights reserved.</p>
-        <p class="text-gray-500 text-sm mt-1">Based in Crawley, West Sussex | Full UK Work Rights</p>
-    </footer>
-
-    <script>
-        // Simple script to get the current year for the footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-</body>
-</html>
+                <div class="stat-card bg-white p-6 transition-all duration-300 h-full fade-in" style="animation-delay: 0.2s;"> 
+                    <div> 
+                        <div class="kpi-icon-bg mb-4"> 
+                            <ion-icon name="trending-up-outline" class="text-2xl"></ion-icon> 
+                        </div> 
+                        <p class="text-sm font-black text-gray-500 uppercase tracking-wider">
