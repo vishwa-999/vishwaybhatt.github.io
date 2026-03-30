@@ -2,77 +2,197 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vishwa Y Bhatt | Finance Transformation & Business Strategy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishwa Y Bhatt | Finance Controller & Strategic Transformation Leader</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <style>
-        :root { --brand-maroon: #632323; --brand-white: #ffffff; --neon-pulse: #94FF00; }
-        .bg-maroon { background-color: var(--brand-maroon); }
-        .text-maroon { color: var(--brand-maroon); }
-        /* Cute Animated Element: The "Live" Pulse */
+        :root {
+            --color-primary-dark: #2F0909; 
+            --color-primary-medium: #7a2828; 
+            --color-primary-light-bg: #f9f6f6; 
+            --color-neon-pulse: #94FF00;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary-light-bg);
+            color: var(--color-primary-dark);
+        }
+
+        /* The Strategy Pulse Element */
         .pulse-dot {
-            height: 8px; width: 8px; background-color: var(--neon-pulse);
+            height: 10px; width: 10px; background-color: var(--color-neon-pulse);
             border-radius: 50%; display: inline-block;
-            box-shadow: 0 0 8px var(--neon-pulse);
+            box-shadow: 0 0 8px var(--color-neon-pulse);
             animation: pulse 2s infinite;
         }
-        @keyframes pulse { 0% { transform: scale(0.95); opacity: 0.7; } 70% { transform: scale(1.3); opacity: 1; } 100% { transform: scale(0.95); opacity: 0.7; } }
+        @keyframes pulse { 
+            0% { transform: scale(0.95); opacity: 0.7; } 
+            70% { transform: scale(1.3); opacity: 1; } 
+            100% { transform: scale(0.95); opacity: 0.7; } 
+        }
+
+        .stat-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .stat-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(47, 9, 9, 0.15);
+        }
     </style>
 </head>
-<body class="bg-slate-50 font-sans">
+<body class="antialiased">
 
-    <section class="py-24 px-6 text-center animate__animated animate__fadeIn">
-        <div class="inline-block px-4 py-1 border border-maroon rounded-full text-[10px] font-bold uppercase tracking-widest text-maroon mb-6">
-            <span class="pulse-dot mr-2"></span> Finance & Business Development Strategy
-        </div>
-        
-        <h1 class="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">
-            I architect <span class="text-maroon">Financial Clarity</span> <br> 
-            to accelerate your <span class="italic underline decoration-maroon decoration-4 underline-offset-8">growth curve.</span>
-        </h1>
-        
-        <p class="max-w-2xl mx-auto text-slate-500 text-lg mb-10 leading-relaxed font-medium">
-            Bridging High-Level Financial Control with AI-led Automation to navigate ambiguity, 
-            optimize commercial performance, and drive sustainable business expansion.
-        </p>
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black tracking-tighter text-primary-dark uppercase">Vishwa Y Bhatt</a>
+            <div class="hidden md:flex space-x-8 items-center text-[10px] font-bold uppercase tracking-widest">
+                <a href="#results" class="hover:text-primary-medium transition">Proven Impact</a>
+                <a href="#transformation" class="hover:text-primary-medium transition">Transformation</a>
+                <a href="#skills" class="hover:text-primary-medium transition">FinTech Stack</a>
+                <a href="mailto:vishwaybhatt@gmail.com" class="bg-[#7a2828] text-white px-6 py-3 rounded-full hover:scale-105 transition shadow-lg">Contact Advisor</a>
+            </div>
+        </nav>
+    </header>
 
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <button class="bg-maroon text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition shadow-lg">Discover Your Next Growth Phase →</button>
-            <button class="bg-white border border-slate-200 text-slate-600 px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition">View Stakeholder Metrics</button>
-        </div>
-    </section>
+    <main class="container mx-auto px-6 py-20">
 
-    <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 px-6 pb-24">
-        
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group animate__animated animate__fadeInUp">
-            <div class="text-maroon mb-4 text-2xl group-hover:scale-110 transition">💹</div>
-            <h4 class="text-xs font-black uppercase text-slate-400 tracking-widest mb-2">Strategic Savings</h4>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">£1.5M+ p.a.</h3>
-            <p class="text-sm text-slate-500 leading-snug">Led deep-dive procurement analysis and spend controls to secure multi-million pound ROI.</p>
-        </div>
+        <section class="text-center mb-32 animate__animated animate__fadeIn">
+            <div class="inline-flex items-center gap-3 px-5 py-2 border border-[#7a2828]/30 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
+                <span class="pulse-dot"></span> Finance Manager | Financial Planning & Transformation
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black text-[#2F0909] leading-tight mb-8 max-w-5xl mx-auto">
+                I bridge the gap between <span class="text-[#7a2828] italic">Traditional Finance</span>, Data Analytics, and Technology.
+            </h1>
+            
+            <p class="max-w-4xl mx-auto text-base md:text-lg text-gray-700 mb-12 leading-relaxed font-medium">
+                A Dynamic Finance Controller and Strategic Transformation Leader with over 8 years of SME experience. 
+                Expert in <strong>Xero, Python automation</strong>, and end-to-end financial operations including <strong>payroll and HMRC compliance</strong>. 
+                Adept at navigating ambiguity to streamline operations, strengthen internal controls, and translate complex datasets into actionable, board-level insights.
+            </p>
 
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group animate__animated animate__fadeInUp animate__delay-1s">
-            <div class="text-maroon mb-4 text-2xl group-hover:scale-110 transition">🐍</div>
-            <h4 class="text-xs font-black uppercase text-slate-400 tracking-widest mb-2">Process Automation</h4>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">60% Cycle Reduction</h3>
-            <p class="text-sm text-slate-500 leading-snug">Utilized Python to automate 100+ hours of monthly reporting, ensuring audit-ready data integrity.</p>
-        </div>
+            <div class="flex flex-col md:flex-row justify-center gap-5">
+                <a href="#results" class="bg-[#7a2828] text-white px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest shadow-2xl hover:bg-[#2F0909] transition transform hover:scale-105">
+                    View Strategic Impact &rarr;
+                </a>
+                <a href="#skills" class="border-2 border-gray-300 text-gray-500 px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-gray-100 transition">
+                    Technical Stack
+                </a>
+            </div>
+        </section>
 
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group animate__animated animate__fadeInUp animate__delay-2s">
-            <div class="text-maroon mb-4 text-2xl group-hover:scale-110 transition">📊</div>
-            <h4 class="text-xs font-bold uppercase text-slate-400 tracking-widest mb-2">Biz Dev ROI</h4>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">18% Portfolio Return</h3>
-            <p class="text-sm text-slate-500 leading-snug">Quantitative modeling and risk-adjusted forecasting to drive expansion in asset-heavy industries.</p>
-        </div>
+        <section id="results" class="mb-32">
+            <h2 class="text-2xl font-black text-center mb-16 uppercase tracking-[0.3em] text-gray-400">Proven Results & Business Development</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="stat-card bg-white p-8 rounded-3xl animate__animated animate__fadeInUp">
+                    <div class="bg-[#7a2828] w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg shadow-[#7a2828]/20">
+                        <ion-icon name="cash-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Cost Optimization</p>
+                    <h3 class="text-2xl font-black text-[#2F0909]">£1.5M+ Savings</h3>
+                    <p class="text-xs text-gray-500 mt-4 leading-relaxed font-medium">Led deep-dive procurement analysis and third-party spend approvals to secure multi-million pound organizational ROI.</p>
+                </div>
 
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group animate__animated animate__fadeInUp animate__delay-3s">
-            <div class="text-maroon mb-4 text-2xl group-hover:scale-110 transition">🏛️</div>
-            <h4 class="text-xs font-black uppercase text-slate-400 tracking-widest mb-2">Executive Advisory</h4>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">Board-Level Impact</h3>
-            <p class="text-sm text-slate-500 leading-snug">Successfully delivered 30+ board packs and financial recommendations adopted by CFOs & CEOs.</p>
-        </div>
+                <div class="stat-card bg-white p-8 rounded-3xl animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="bg-[#7a2828] w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg shadow-[#7a2828]/20">
+                        <ion-icon name="code-working-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Python Automation</p>
+                    <h3 class="text-2xl font-black text-[#2F0909]">60% Cycle Cut</h3>
+                    <p class="text-xs text-gray-500 mt-4 leading-relaxed font-medium">Automated complex reporting workflows using Python & Power BI, reducing monthly close from 5 days to 2.</p>
+                </div>
 
-    </section>
+                <div class="stat-card bg-white p-8 rounded-3xl animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="bg-[#7a2828] w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg shadow-[#7a2828]/20">
+                        <ion-icon name="trending-up-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Quant Strategy</p>
+                    <h3 class="text-2xl font-black text-[#2F0909]">18% Portfolio</h3>
+                    <p class="text-xs text-gray-500 mt-4 leading-relaxed font-medium">Applied Econometric modelling and risk-adjusted forecasting to drive sustainable business growth and returns.</p>
+                    <div id="chart-growth" class="mt-4"></div>
+                </div>
 
+                <div class="stat-card bg-white p-8 rounded-3xl animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="bg-[#7a2828] w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg shadow-[#7a2828]/20">
+                        <ion-icon name="stats-chart-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Executive Influence</p>
+                    <h3 class="text-2xl font-black text-[#2F0909]">Board Clarity</h3>
+                    <p class="text-xs text-gray-500 mt-4 leading-relaxed font-medium">Successfully delivered 30+ board-level insights adopted by CFOs to strengthen internal controls and operations.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills" class="mb-32">
+            <div class="bg-[#2F0909] rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative">
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-black mb-12">The Whole Package: Finance + Tech + Strategy</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div>
+                            <h4 class="text-xs font-black text-[#7a2828] uppercase mb-4 tracking-widest">Finance Tech</h4>
+                            <ul class="text-sm space-y-2 opacity-80 font-medium">
+                                <li>Python (Pandas, NumPy)</li>
+                                <li>Xero & SunSystems</li>
+                                <li>Power BI & Tableau</li>
+                                <li>SQL & Advanced Excel</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-black text-[#7a2828] uppercase mb-4 tracking-widest">Controllership</h4>
+                            <ul class="text-sm space-y-2 opacity-80 font-medium">
+                                <li>HMRC & GDPR Compliance</li>
+                                <li>Payroll & Statutory NEST</li>
+                                <li>Internal Controls & Audit</li>
+                                <li>P&L Management</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-black text-[#7a2828] uppercase mb-4 tracking-widest">Transformation</h4>
+                            <ul class="text-sm space-y-2 opacity-80 font-medium">
+                                <li>Process Redesign</li>
+                                <li>Cash Flow Automation</li>
+                                <li>Econometric Modelling</li>
+                                <li>Scenario Planning</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-black text-[#7a2828] uppercase mb-4 tracking-widest">Education</h4>
+                            <ul class="text-sm space-y-2 opacity-80 font-medium">
+                                <li>MSc Financial Technology</li>
+                                <li>PhD Econometrics (Research)</li>
+                                <li>ACCA (Part-Qualified)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-12 border-t border-gray-100">
+        <p class="text-xs font-black text-gray-400 uppercase tracking-[0.5em] mb-4">Vishwa Y Bhatt &copy; 2026</p>
+        <p class="text-[10px] text-gray-500 italic">Bridging Financial acumen with strategic advisory to drive sustainable growth.</p>
+    </footer>
+
+    <script>
+        // Growth Sparkline
+        var optionsGrowth = {
+            series: [{ data: [20, 45, 35, 60, 55, 75, 80, 95, 125] }],
+            chart: { type: 'line', height: 80, sparkline: { enabled: true }, animations: { enabled: true, easing: 'easeinout', speed: 2000 } },
+            stroke: { curve: 'smooth', width: 4, colors: ['#7a2828'] },
+            tooltip: { enabled: false }
+        };
+        var chart1 = new ApexCharts(document.querySelector("#chart-growth"), optionsGrowth);
+        chart1.render();
+    </script>
 </body>
 </html>
